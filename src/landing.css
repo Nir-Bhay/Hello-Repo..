@@ -23,6 +23,17 @@ body {
 .hero h1 { font-size: clamp(38px, 6vw, 74px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 16px; }
 .hero h1 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; color: var(--accent); }
 .hero p { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 760px; }
+.final-video { display: grid; grid-template-columns: minmax(280px, 420px) 1fr; gap: 22px; align-items: start; margin-bottom: 34px; background: rgba(18,18,26,.8); border: 1px solid var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 18px 50px rgba(255,92,56,.10); border-radius: 20px; padding: 20px; }
+.final-player video { width: 100%; max-height: 72vh; border-radius: 14px; background: #000; display: block; }
+.final-tag { font-family: "JetBrains Mono", monospace; font-size: 12px; letter-spacing: .16em; color: var(--accent); }
+.final-info h2 { margin: 10px 0 10px; font-size: 30px; letter-spacing: -0.01em; }
+.final-info p { color: var(--muted); line-height: 1.65; font-size: 15.5px; }
+.final-info dl { margin: 16px 0 20px; display: flex; flex-direction: column; gap: 10px; }
+.final-info dl div { display: flex; flex-direction: column; gap: 2px; }
+.final-info dt { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
+.final-info dd { margin: 0; font-size: 15px; }
+.download-btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 800; font-size: 17px; padding: 14px 30px; border-radius: 999px; box-shadow: 0 10px 30px rgba(255,92,56,.35); }
+.download-btn:hover { filter: brightness(1.08); }
 .switcher { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
 .card { text-align: left; background: rgba(18,18,26,.8); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; color: var(--muted); cursor: pointer; display: flex; flex-direction: column; gap: 5px; font: inherit; }
 .card strong { color: var(--paper); font-size: 16px; }

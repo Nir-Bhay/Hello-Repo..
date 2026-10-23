@@ -97,6 +97,36 @@ export const App: React.FC = () => {
         </p>
       </section>
 
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/001-chatgpt-google-9x16-v1.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">✅ FINAL RENDERED VIDEO · P001</span>
+          <h2>ChatGPT × Google Connect</h2>
+          <p>
+            Ye upar webpage par hi <strong>asli rendered MP4</strong> chal raha hai — yahi file
+            Shorts/Reels par upload hogi. Play karke yahi preview kar lo (sound on 🔊),
+            pasand aaye to neeche se download kar lo.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>50 seconds</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 30 FPS · H.264 + AAC</dd></div>
+            <div><dt>Sound</dt><dd>Music + SFX included (−14.3 LUFS)</dd></div>
+            <div><dt>File size</dt><dd>~22 MB</dd></div>
+          </dl>
+          <a className="download-btn" href="/videos/001-chatgpt-google-9x16-v1.mp4" download="001-chatgpt-google-9x16-v1.mp4">
+            ⬇ Download MP4
+          </a>
+          <p className="note">Neeche wala player live-code preview hai (scenes badalne ke liye); ye wala final file hai.</p>
+        </div>
+      </section>
+
       <nav className="switcher">
         {COMPS.map((c) => (
           <button
