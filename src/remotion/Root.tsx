@@ -3,6 +3,7 @@ import { Composition } from "remotion";
 import { ShowcaseKinetic } from "./compositions/ShowcaseKinetic";
 import { ShortHook } from "./compositions/ShortHook";
 import { DataStory } from "./compositions/DataStory";
+import { P001ChatGptConnect } from "./compositions/P001ChatGptConnect";
 
 /**
  * Saari compositions yahan register hoti hain.
@@ -13,6 +14,15 @@ import { DataStory } from "./compositions/DataStory";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* P001 — pehla asal production (docs: productions/001-chatgpt-google-connect/) */}
+      <Composition
+        id="P001ChatGptConnect"
+        component={P001ChatGptConnect}
+        durationInFrames={50 * 30}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       {/* YouTube / landscape — cinematic 60fps */}
       <Composition
         id="ShowcaseKinetic"

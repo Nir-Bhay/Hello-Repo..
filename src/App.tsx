@@ -3,6 +3,7 @@ import { Player } from "@remotion/player";
 import { ShowcaseKinetic } from "./remotion/compositions/ShowcaseKinetic";
 import { ShortHook } from "./remotion/compositions/ShortHook";
 import { DataStory } from "./remotion/compositions/DataStory";
+import { P001ChatGptConnect } from "./remotion/compositions/P001ChatGptConnect";
 
 type Comp = {
   id: string;

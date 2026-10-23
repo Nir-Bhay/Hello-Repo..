@@ -80,13 +80,18 @@ export const CameraRig: React.FC<{
   y?: number;
 }> = ({ children, t, start, dur, from = 1, to = 1.06, x = 0, y = 0 }) => {
   const eased = prog(t, start, dur); // easeOut default — camera hamesha naram rukta hai
+  // NOTE: AbsoluteFill yahan NAHI — absolute inset-0 parent ki padding ko ignore karke
+  // content ko edge se chipka deta hai aur scale use kaat deta hai (P001 review me pakda gaya).
+  // Normal-flow div parent ke content-box (padding ke andar) se hi scale hota hai.
   return (
-    <AbsoluteFill
+    <div
       style={{
+        width: "100%",
+        height: "100%",
         transform: `scale(${map(eased, from, to)}) translate(${map(eased, 0, x)}px, ${map(eased, 0, y)}px)`,
       }}
     >
       {children}
-    </AbsoluteFill>
+    </div>
   );
 };
