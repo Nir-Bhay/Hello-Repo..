@@ -1,0 +1,39 @@
+{
+  "name": "hello-motion-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Motion graphics production workspace — code se production-ready video (Remotion + React), story -> script -> storyboard -> timeline -> render -> review.",
+  "type": "module",
+  "scripts": {
+    "preview": "vite --host 0.0.0.0 --port 5173",
+    "build:preview": "vite build",
+    "studio": "remotion studio src/remotion/index.ts --host 0.0.0.0 --port 3001",
+    "typecheck": "tsc --noEmit",
+    "compositions": "remotion compositions src/remotion/index.ts",
+    "still": "remotion still src/remotion/index.ts ShowcaseKinetic out/still-showcase.png --frame=180",
+    "render:showcase": "remotion render src/remotion/index.ts ShowcaseKinetic out/showcase-kinetic-1080p60.mp4",
+    "render:short": "remotion render src/remotion/index.ts ShortHook out/short-hook-9x16.mp4",
+    "render:data": "remotion render src/remotion/index.ts DataStory out/data-story-1x1.mp4",
+    "render:draft": "remotion render src/remotion/index.ts ShowcaseKinetic out/draft.mp4 --scale=0.5 --crf=28",
+    "render:all": "npm run render:showcase && npm run render:short && npm run render:data"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.5",
+    "@fontsource/instrument-serif": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/player": "^4.0.0",
+    "@remotion/shapes": "^4.0.0",
+    "@remotion/transitions": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}

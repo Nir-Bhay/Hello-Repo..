@@ -1,0 +1,13 @@
+node_modules/
+dist/
+out/*.mp4
+out/*.png
+out/*.wav
+out/sheets/
+.DS_Store
+*.log
+# reference clones (study only, repo me commit nahi karte)
+references/claude-motion/
+.env
+.env.*
+!.env.example
