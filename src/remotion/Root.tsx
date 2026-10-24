@@ -4,6 +4,7 @@ import { ShowcaseKinetic } from "./compositions/ShowcaseKinetic";
 import { ShortHook } from "./compositions/ShortHook";
 import { DataStory } from "./compositions/DataStory";
 import { P001ChatGptConnect } from "./compositions/P001ChatGptConnect";
+import { Asi05TheRepairThatRan } from "./compositions/asi05/Asi05";
 
 /**
  * Saari compositions yahan register hoti hain.
@@ -20,6 +21,15 @@ export const RemotionRoot: React.FC = () => {
         component={P001ChatGptConnect}
         durationInFrames={50 * 30}
         fps={30}
+        width={1080}
+        height={1920}
+      />
+      {/* ASI05 — Ractor episode, DIRECTOR-NOTE driven (productions/002-asi05-the-repair-that-ran/) */}
+      <Composition
+        id="Asi05TheRepairThatRan"
+        component={Asi05TheRepairThatRan}
+        durationInFrames={75 * 60}
+        fps={60}
         width={1080}
         height={1920}
       />

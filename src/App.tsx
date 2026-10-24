@@ -4,6 +4,7 @@ import { ShowcaseKinetic } from "./remotion/compositions/ShowcaseKinetic";
 import { ShortHook } from "./remotion/compositions/ShortHook";
 import { DataStory } from "./remotion/compositions/DataStory";
 import { P001ChatGptConnect } from "./remotion/compositions/P001ChatGptConnect";
+import { Asi05TheRepairThatRan } from "./remotion/compositions/asi05/Asi05";
 
 type Comp = {
   id: string;
@@ -20,6 +21,19 @@ type Comp = {
 };
 
 const COMPS: Comp[] = [
+  {
+    id: "Asi05TheRepairThatRan",
+    title: "ASI05 — The Repair That Ran",
+    format: "9:16 · 1080×1920",
+    use: "Ractor episode · Shorts / Reels",
+    width: 1080,
+    height: 1920,
+    fps: 60,
+    seconds: 75,
+    component: Asi05TheRepairThatRan,
+    renderCmd: "npx remotion render src/remotion/index.ts Asi05TheRepairThatRan",
+    scenes: "S01 task → S02 outside report → S03 red repair → S04 agent writes code → S05 it runs → S06 secret read (K01 stays, K02 born) → S07 secret escapes → S08 title → S09 replay → S10 restricted workspace → S11 still runs → S12 access denied → S13 connection blocked → S14 lesson → S15 RACTOR close",
+  },
   {
     id: "ShowcaseKinetic",
     title: "Showcase — Kinetic Type",
@@ -124,6 +138,37 @@ export const App: React.FC = () => {
             ⬇ Download MP4
           </a>
           <p className="note">Neeche wala player live-code preview hai (scenes badalne ke liye); ye wala final file hai.</p>
+        </div>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">✅ FINAL RENDERED VIDEO · ASI05 · RACTOR</span>
+          <h2>The Repair That Ran</h2>
+          <p>
+            Ek error report ke andar chhupa repair, agent se code likhva kar <strong>project secret
+            chura kar bahar bhej deta hai</strong> — phir wahi code restricted workspace me dobara
+            chalta hai, aur is baar secret bhi nahi milta, raasta bhi band milta hai.
+            Generated code is untrusted — limit what it can reach.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>75 seconds · 15 shots (DIRECTOR-NOTE ke exact timings)</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 + AAC</dd></div>
+            <div><dt>Sound</dt><dd>Silent by design (director note: sound alag pass hai)</dd></div>
+            <div><dt>File size</dt><dd>~5.4 MB</dd></div>
+          </dl>
+          <a className="download-btn" href="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4" download="002-asi05-the-repair-that-ran-9x16-v1.mp4">
+            ⬇ Download MP4
+          </a>
+          <p className="note">Direction: productions/002-asi05-the-repair-that-ran/00-DIRECTOR-NOTE.md · neeche live-code player me yehi episode frame-by-frame scrub bhi kar sakte ho.</p>
         </div>
       </section>
 
