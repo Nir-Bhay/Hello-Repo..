@@ -28,10 +28,22 @@
 - [ ] Sirf palette colors; accent sirf point pe?
 - [ ] Travel karne wala object har scene me ek jaisa dikhta hai?
 
+## Causality & states (Studio Method v2)
+- [ ] Har handoff recipient tak asal me pahuncha (leading edge se contact), phir hi reaction hua?
+- [ ] **Forbidden states absent hain?** Har trigger se pehle wala frame check kiya — jawab/result/payment pehle se to nahi dikh raha?
+- [ ] Beech ke poses (quarter/middle) saaf hain — morph me knot, takrav, kata hua text to nahi?
+- [ ] Camera ke baad bhi sab bounds frame ke andar hain (projected bounds, sirf design ke numbers nahi)?
+
 ## Sound (final pass me)
 - [ ] Bade SFX apne beats pe frame-exact baithe hain?
-- [ ] Loudness −14 LUFS ±1, true peak ≤ −1 dBFS?
+- [ ] Loudness −14 LUFS ±1, true peak ≤ −1 dBFS? (encode ke BAAD measure kiya?)
 - [ ] Mute pe poori baat samajh aati hai (captions)?
+
+## Readiness record (notes.md me alag-alag likho — ek "done" nahi)
+- **Export:** dimensions/fps/duration/audio measured: <result>
+- **Semantic:** causal order + forbidden states frames par verified: <result>
+- **Craft:** normal speed + phone size par dekha; bachi kamiyan: <result / pending>
+- **Comprehension:** bina samjhaye kisi ko dikhaya?: <result / pending — pending hai to wahi likho>
 
 ## Report (user ko)
 Kya check kiya · kya mila · kya fix kiya · kaunsa frame/sheet proof hai · bacha hua risk.

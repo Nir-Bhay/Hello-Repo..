@@ -10,7 +10,9 @@
 | S2-01 | | | | | | | | |
 
 ## Scene notes
+- **Causal chain (poori film ek line me):** source → transfer → contact → response → consequence: <…>
 - **Persistent object** (poori video travel karega): <dot/line/bar — kya hai, role kaise badlega>
+- **Material jobs:** har scene me kaunsa material (flat vector / sticker-evidence / morph / cel accent / line art) aur *kyun* (docs/14 catalogue se): <…>
 - **Hero moment** (ek hi): <shot #, kya hoga, usse pehle build-up kahan hai, baad me hold kitna>
 - **Palette/type:** docs/04 default, ya production-specific: <…>
 - **Continuity risk:** <kahan collision/clipping ho sakta hai — review loop me wahi pehle check hoga>

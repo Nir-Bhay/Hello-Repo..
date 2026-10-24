@@ -4,9 +4,13 @@ Ye repo ek motion-graphics production workspace hai (Remotion: React → MP4). K
 
 ## Pehle padho (order)
 1. `docs/00-START-HERE.md` — repo map + commands
-2. `docs/10-STORY-TO-VIDEO-pipeline.md` — kaam ka process (gates ke saath)
-3. `docs/04-MOTION-DESIGN-BIBLE.md` — taste ke numbers
-4. Kaam ke hisaab se: formats `docs/05`, SVG `docs/06`, camera/transitions `docs/07`, audio `docs/08`, quality gate `docs/09`
+2. `docs/12-KNOWLEDGE-BASE.md` — user ki share ki hui HAR cheez ka index (kya kahan hai)
+3. `docs/13-DEEP-REVIEW-synthesis.md` — **Studio Method v2** (chaaron systems ka synthesis; ab se yahi method)
+4. `docs/10-STORY-TO-VIDEO-pipeline.md` — kaam ka process (gates ke saath)
+5. `docs/04-MOTION-DESIGN-BIBLE.md` — taste ke numbers
+6. Kaam ke hisaab se: formats `docs/05`, styles `docs/14`, SVG `docs/06`, camera/transitions `docs/07`, audio `docs/08`, quality gate `docs/09`, readiness `docs/16`
+7. **Ractor episode ka kaam ho to:** `skill-pack/ractor-video-production/SKILL.md` + uske references pehle; reviewer sawal `skill-pack/agents/` se. (Uski sister skill `ractor-motion-direction/SKILL.md` abhi missing hai — references uplabdh hain.)
+8. Remotion API ka sawal ho to pehle `references/remotion-skills/skills/` ke official skills, phir docs.
 
 ## Video banane ka process (skip mat karo)
 1. **Document pehle.** `productions/<NNN>-<slug>/` me brief → (research) → hook options → script → storyboard/shot-list → `timeline.json`. Har beat seconds me, named.
