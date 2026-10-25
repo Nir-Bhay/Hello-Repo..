@@ -51,6 +51,7 @@ body {
 .cmd { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; color: var(--muted); font-size: 13px; }
 .cmd code, .foot code { background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 13px; }
 .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 .walkthroughs { margin: 0 0 34px; }
 .walkthroughs h2 { font-size: 28px; letter-spacing: -0.01em; margin: 0 0 10px; }
 .walkthrough-intro { color: var(--muted); font-size: 15.5px; line-height: 1.65; max-width: 820px; margin: 0 0 18px; }
@@ -74,6 +75,9 @@ body {
 .foot { margin-top: 40px; border: 1px solid var(--line); border-radius: 18px; padding: 24px; background: rgba(18,18,26,.8); line-height: 2; color: var(--muted); }
 .foot p { color: var(--paper); font-size: 17px; line-height: 1.6; margin-top: 0; }
 @media (max-width: 900px) {
-  .switcher, .steps, .stage { grid-template-columns: 1fr; }
+  .switcher, .steps, .stage, .walkthrough-grid, .final-video { grid-template-columns: 1fr; }
   .stage.vertical .player-wrap { margin: 0 auto; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }

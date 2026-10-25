@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Player } from "@remotion/player";
 import { ShowcaseKinetic } from "./remotion/compositions/ShowcaseKinetic";
 import { ShortHook } from "./remotion/compositions/ShortHook";
@@ -125,6 +125,14 @@ const PIPELINE = [
 
 export const App: React.FC = () => {
   const [active, setActive] = useState<Comp>(COMPS[0]);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
   const Cmp = active.component;
   const vertical = active.height > active.width;
 
@@ -179,6 +187,12 @@ export const App: React.FC = () => {
           Saari guides ek jagah: <code>docs/17-WALKTHROUGHS-index.md</code> · Aage ka genuine
           kaam: <code>docs/18-CONTRIBUTION-BACKLOG-50.md</code> (50 real tasks — fake commits nahi).
         </p>
+        <p className="note">
+          Motion se pareshani hoti hai? Tumhari OS ki reduced-motion setting par neeche wala live
+          player khud nahi chalega — play tum dabaaoge. Aur har kahani bina chalti tasveer ke bhi
+          padhi ja sakti hai: ASI05 aur P001 ke transcripts productions folders me hain (walkthrough
+          index se milege). Har video pehle ek poster ke saath khulta hai, khaali kaala frame nahi.
+        </p>
       </section>
 
       <section className="final-video">
@@ -187,6 +201,8 @@ export const App: React.FC = () => {
             controls
             playsInline
             preload="metadata"
+            poster="/images/walkthroughs/p001-chatgpt-google-cover.jpg"
+            aria-label="P001 final rendered video: ChatGPT Google Connect se judta hai"
             src="/videos/001-chatgpt-google-9x16-v1.mp4"
           />
         </div>
@@ -217,6 +233,8 @@ export const App: React.FC = () => {
             controls
             playsInline
             preload="metadata"
+            poster="/images/walkthroughs/asi05-premium-cover.jpg"
+            aria-label="ASI05 premium episode: The Repair That Ran, silent 75 second video"
             src="/videos/asi05-premium.mp4"
           />
         </div>
@@ -233,7 +251,7 @@ export const App: React.FC = () => {
             <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 yuv420p · silent</dd></div>
             <div><dt>Status</dt><dd>Premium v1 rendered and frame-checked</dd></div>
           </dl>
-          <a className="download-btn" href="/videos/asi05-premium.mp4" download="asi05-premium.mp4">
+          <a className="download-btn" href="/videos/asi05-premium.mp4" download="002-asi05-premium-9x16-v1.mp4">
             ⬇ Download MP4
           </a>
           <p className="note">Neeche purane proof/v1 sirf compare ke liye rakhe hain.</p>
@@ -246,6 +264,8 @@ export const App: React.FC = () => {
             controls
             playsInline
             preload="metadata"
+            poster="/images/walkthroughs/asi05-premium-cover.jpg"
+            aria-label="ASI05 v2 motion proof, sirf shots S03 se S05"
             src="/videos/asi05v2-proof-s03-s05.mp4"
           />
         </div>
@@ -273,6 +293,8 @@ export const App: React.FC = () => {
             controls
             playsInline
             preload="metadata"
+            poster="/images/walkthroughs/asi05-premium-cover.jpg"
+            aria-label="ASI05 purana v1 video, reject ho chuka, sirf compare ke liye"
             src="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4"
           />
         </div>
@@ -324,7 +346,7 @@ export const App: React.FC = () => {
             compositionHeight={active.height}
             controls
             loop
-            autoPlay
+            autoPlay={!reducedMotion}
             clickToPlay
             doubleClickToFullscreen
             style={{ width: "100%", height: "100%" }}
