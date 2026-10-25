@@ -105,6 +105,6 @@
 - `CONTRIBUTING.md` (C11), PR template (C13), 4 issue templates (C12).
 - `npm run check:links` — internal Markdown link checker, bina dependency (C10).
 - Glossary (C15) aur exact on-screen copy index (C16); production index पहले se मौजूद (C14).
-- C09 (fresh-clone quickstart) ki verification isi PR ka aakhri step hai.
+- C09 verified hai: bilkul naye clone par `npm ci`, link-check, typecheck, build, preview (HTTP 200) aur Remotion Studio boot (HTTP 200) — sab chala.
 
 **Agla kadam:** Batch 3 — accessibility & viewer experience (C17–C24). Usme sabse pehle C22 (video posters) aur C18 (ASI05 text transcript) uthana sabse zyada fayda dega, kyunki dono seedha viewer ke kaam ke hain.
