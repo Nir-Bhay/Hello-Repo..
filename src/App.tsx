@@ -147,6 +147,62 @@ export const App: React.FC = () => {
             controls
             playsInline
             preload="metadata"
+            src="/videos/asi05-premium.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">✅ PREMIUM REBUILD · ASI05 · FULL EPISODE</span>
+          <h2>The Repair That Ran — Premium</h2>
+          <p>
+            Wahi kahani, ab studio-finish ke saath: chhupa hua hukm pehle ek <strong>alag copy</strong> banta hai,
+            agent <strong>khud script likhta aur chalata hai</strong>, secret ki copy bahar jaati hai — phir ek saaf
+            <strong> Replay</strong> me wahi code chalta hai, lekin is baar na secret milta hai, na raasta khula.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>75 seconds · 4500 frames · 15 shots</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 yuv420p · silent</dd></div>
+            <div><dt>Status</dt><dd>Premium v1 rendered and frame-checked</dd></div>
+          </dl>
+          <a className="download-btn" href="/videos/asi05-premium.mp4" download="asi05-premium.mp4">
+            ⬇ Download MP4
+          </a>
+          <p className="note">Neeche purane proof/v1 sirf compare ke liye rakhe hain.</p>
+        </div>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/asi05v2-proof-s03-s05.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">🎬 MOTION PROOF · ASI05 v2 (Director's Bible) · Gate 3</span>
+          <h2>The Repair That Ran — v2 motion proof (S03–S05)</h2>
+          <p>
+            Ye pura episode <strong>nahi</strong> hai — sirf sabse mushkil harkat ka saboot hai:
+            bahari report me chhupa hua hukm, uski <strong>alag copy strip</strong> editor tak jaati hai,
+            agent <strong>khud naya script likhta hai</strong>, phir use dock karke <strong>RUN dabata hai</strong>.
+            RUNNING keval dabane ke <em>baad</em> aata hai. Isi quality par pura episode banega.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>17.5 seconds · frames 600–1649 (shots S03, S04, S05)</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · silent proof</dd></div>
+            <div><dt>Status</dt><dd>Gate 3 — motion review pending; full render abhi nahi hua</dd></div>
+          </dl>
+          <p className="note">Neeche wala video purana v1 hai (reject ho chuka) — sirf compare ke liye rakha hai.</p>
+        </div>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
             src="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4"
           />
         </div>
