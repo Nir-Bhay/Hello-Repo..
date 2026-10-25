@@ -82,10 +82,10 @@
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
 | C41 | ASI04 (next episode) ka brief | Planned | Director-note format me story, lesson, forbidden states — user review pehle |
-| C42 | ASI05 narrated walkthrough script | Planned | 75s video ke saath bolne wala script; voice decision ke baad record |
-| C43 | ASI05 Hindi walkthrough script | Planned | Wahi walkthrough Hinglish me; technical shabd English me rakhe |
-| C44 | P001 narrated walkthrough script | Planned | 50s timeline par voice script + caption file |
-| C45 | Demo compositions ki 60s walkthrough script | Planned | Teenon demos ka ek combined narration script |
+| C42 | ASI05 narrated walkthrough script | ✅ Done (script; recording voice-faisle ke baad) | 75s video ke saath bolne wala script; voice decision ke baad record |
+| C43 | ASI05 Hindi walkthrough script | ✅ Done (script; recording baaki) | Wahi walkthrough Hinglish me; technical shabd English me rakhe |
+| C44 | P001 narrated walkthrough script | ✅ Done (script; recording baaki) | 50s timeline par voice script + caption file |
+| C45 | Demo compositions ki 60s walkthrough script | ✅ Done (script; recording baaki) | Teenon demos ka ek combined narration script |
 | C46 | Agle episodes ke cover/storyboard art direction | Planned | Palette lock ke andar cover system; gibberish text = 0 |
 | C47 | ASI05 sound-design pass (decision ke baad) | Planned | Music/SFX plan pehle doc me; mix −14 LUFS target; silent version bhi safe |
 | C48 | Good-first-issues ki curated list | Planned | Backlog se 10 sabse chhote tasks issue-ready descriptions ke saath |
@@ -125,4 +125,8 @@
 - Browser smoke-test checklist `docs/24` (C39) aur release checklist `templates/06` (C40).
 - **C33 (render-metadata script), C34 (frame-extraction script) aur C38 (visual-regression stills) abhi Planned hain** — inhe ffmpeg/render infra wali sitting chahiye; aadha-adhoora script jhootha Done kehna sahi nahi hoga.
 
-**Agla kadam:** Batch 6 — nayi content (C41–C50), jisme sabse pehla asal kaam hai **ASI04 ka brief (C41)**; uske liye story ki disha user se confirm hogi, phir pehle document banega, video baad me. Uske saath bache hue C29/C33/C34/C38 infra wali sitting me uthenge.
+**Batch 6 — Nayi content (shuruaat ho gayi):**
+- Chaaro narrated walkthrough **scripts** tayyar hain: ASI05 English (C42) + Hinglish (C43), P001 (C44), demo compositions 60s (C45). Recording ke liye voice ka faisla baaki hai — creator ki awaz best rahegi; synthetic voice sirf alag se tai hone par.
+- **Baaki bacha hai:** C41 (ASI04 brief — agli episode ki story user se confirm hogi, phir pehle document), C46–C50 (art direction, sound pass, good-first-issues, quarterly ritual, case study), aur infra wale C29/C33/C34/C38 + permission-blocked C35/C36.
+
+**Agla kadam:** User ki disha milte hi C41 (ASI04 brief). Tab tak ke liye C48 (good-first-issues ki curated list) sabse chhota aur faydemand kadam hai.
