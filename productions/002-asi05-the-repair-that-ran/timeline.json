@@ -1,0 +1,21 @@
+{
+  "fps": 60,
+  "duration": 75,
+  "format": { "width": 1080, "height": 1920 },
+  "_source": "00-DIRECTOR-NOTE.md section 6 — shot windows aur sub-beats wahi se. Times seconds me.",
+  "s01_legit_job":      { "in": 0.0,  "contact": 1.4, "gaze": 1.7, "holdTo": 4.2, "out": 5.0 },
+  "s02_report_outside": { "in": 5.0,  "arrive": 5.7, "flapOpen": [8.0, 8.7], "out": 10.0 },
+  "s03_attacker_repair":{ "in": 10.0, "instructionRead": [10.0, 12.5], "annotationIn": 12.6, "annotationOut": [14.7, 15.0], "brackets": [15.1, 15.6], "out": 16.0 },
+  "s04_agent_writes":   { "in": 16.0, "q01Created": 16.4, "q01Contact": 17.3, "authoring": [17.5, 18.2], "coexistHold": [18.2, 18.7], "reportOut": [18.7, 19.0], "caption": [19.0, 21.6], "out": 22.0 },
+  "s05_it_runs":        { "in": 22.0, "dockContact": 23.1, "seated": 23.4, "press": [23.8, 24.0], "runningFrom": 24.0, "caption": [24.5, 27.2], "out": 27.5 },
+  "s06_reach_secret":   { "in": 27.5, "op1": 28.2, "op2": 30.0, "holdTo": 32.0, "readLine": [32.0, 32.5], "k02Born": [32.7, 33.2], "out": 33.5 },
+  "s07_secret_escapes": { "in": 33.5, "crossOutlet": 35.0, "received": 35.5, "settle": 35.8, "caption": [36.1, 39.0], "out": 39.0 },
+  "s08_name_it":        { "in": 39.0, "settled": [39.5, 43.0], "out": 43.0 },
+  "s09_replay":         { "in": 43.0, "legible": [43.5, 47.0], "out": 47.0 },
+  "s10_boundary_first": { "in": 47.0, "copySettled": 47.7, "note1": [47.8, 50.1], "shutter": [50.2, 50.5], "note2": [50.7, 53.0], "out": 53.0 },
+  "s11_still_runs":     { "in": 53.0, "dock": 53.9, "press": [54.3, 54.5], "caption": [54.8, 57.5], "out": 57.5 },
+  "s12_read_denied":    { "in": 57.5, "deniedAt": 58.5, "verdict": [58.7, 62.5], "out": 62.5 },
+  "s13_route_closed":   { "in": 62.5, "reachPort": 63.2, "verdict": [63.5, 66.5], "out": 66.5 },
+  "s14_lesson":         { "in": 66.5, "line1": [66.7, 69.0], "line2": [69.15, 71.5], "out": 71.5 },
+  "s15_close":          { "in": 71.5, "settle": 72.0, "holdTo": 75.0 }
+}

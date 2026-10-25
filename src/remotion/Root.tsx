@@ -1,0 +1,95 @@
+import React from "react";
+import { Composition } from "remotion";
+import { ShowcaseKinetic } from "./compositions/ShowcaseKinetic";
+import { ShortHook } from "./compositions/ShortHook";
+import { DataStory } from "./compositions/DataStory";
+import { P001ChatGptConnect } from "./compositions/P001ChatGptConnect";
+import { Asi05TheRepairThatRan } from "./compositions/asi05/Asi05";
+import { Asi05V2 } from "./compositions/asi05v2/Asi05V2";
+import { Asi05StyleSample } from "./compositions/asi05v2/Asi05StyleSample";
+import { Asi05Premium } from "./compositions/asi05v3/Asi05Premium";
+
+/**
+ * Saari compositions yahan register hoti hain.
+ * Naya video = productions/<id>-<slug>/ me pehle brief+storyboard+timeline,
+ * phir yahan ek <Composition> (docs/10-STORY-TO-VIDEO-pipeline.md).
+ * Time hamesha seconds x fps — durationInFrames = seconds * fps.
+ */
+export const RemotionRoot: React.FC = () => {
+  return (
+    <>
+      {/* P001 — pehla asal production (docs: productions/001-chatgpt-google-connect/) */}
+      <Composition
+        id="P001ChatGptConnect"
+        component={P001ChatGptConnect}
+        durationInFrames={50 * 30}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      {/* ASI05 — Ractor episode, DIRECTOR-NOTE driven (productions/002-asi05-the-repair-that-ran/) */}
+      <Composition
+        id="Asi05TheRepairThatRan"
+        component={Asi05TheRepairThatRan}
+        durationInFrames={75 * 60}
+        fps={60}
+        width={1080}
+        height={1920}
+      />
+      {/* ASI05 v2 — Director's Bible v2.0 rebuild (Gate review chal raha hai) */}
+      <Composition
+        id="Asi05V2"
+        component={Asi05V2}
+        durationInFrames={4500}
+        fps={60}
+        width={1080}
+        height={1920}
+      />
+      {/* ASI05 v2 style sample — sirf S04 explainer look test (episode frames 960–1319) */}
+      <Composition
+        id="Asi05StyleSample"
+        component={Asi05StyleSample}
+        durationInFrames={360}
+        fps={60}
+        width={1080}
+        height={1920}
+      />
+      {/* ASI05 PREMIUM — master-prompt studio rebuild (same 4500-frame direction) */}
+      <Composition
+        id="Asi05Premium"
+        component={Asi05Premium}
+        durationInFrames={4500}
+        fps={60}
+        width={1080}
+        height={1920}
+      />
+      {/* YouTube / landscape — cinematic 60fps */}
+      <Composition
+        id="ShowcaseKinetic"
+        component={ShowcaseKinetic}
+        durationInFrames={12 * 60}
+        fps={60}
+        width={1920}
+        height={1080}
+      />
+      {/* Shorts / Reels / TikTok — 9:16 hook machine */}
+      <Composition
+        id="ShortHook"
+        component={ShortHook}
+        durationInFrames={15 * 30}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      {/* Feed post 1:1 — data story */}
+      <Composition
+        id="DataStory"
+        component={DataStory}
+        durationInFrames={10 * 30}
+        fps={30}
+        width={1080}
+        height={1080}
+      />
+    </>
+  );
+};

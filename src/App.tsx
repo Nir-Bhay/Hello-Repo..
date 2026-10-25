@@ -1,0 +1,307 @@
+import React, { useState } from "react";
+import { Player } from "@remotion/player";
+import { ShowcaseKinetic } from "./remotion/compositions/ShowcaseKinetic";
+import { ShortHook } from "./remotion/compositions/ShortHook";
+import { DataStory } from "./remotion/compositions/DataStory";
+import { P001ChatGptConnect } from "./remotion/compositions/P001ChatGptConnect";
+import { Asi05TheRepairThatRan } from "./remotion/compositions/asi05/Asi05";
+
+type Comp = {
+  id: string;
+  title: string;
+  format: string;
+  use: string;
+  width: number;
+  height: number;
+  fps: number;
+  seconds: number;
+  component: React.ComponentType;
+  renderCmd: string;
+  scenes: string;
+};
+
+const COMPS: Comp[] = [
+  {
+    id: "Asi05TheRepairThatRan",
+    title: "ASI05 — The Repair That Ran",
+    format: "9:16 · 1080×1920",
+    use: "Ractor episode · Shorts / Reels",
+    width: 1080,
+    height: 1920,
+    fps: 60,
+    seconds: 75,
+    component: Asi05TheRepairThatRan,
+    renderCmd: "npx remotion render src/remotion/index.ts Asi05TheRepairThatRan",
+    scenes: "S01 task → S02 outside report → S03 red repair → S04 agent writes code → S05 it runs → S06 secret read (K01 stays, K02 born) → S07 secret escapes → S08 title → S09 replay → S10 restricted workspace → S11 still runs → S12 access denied → S13 connection blocked → S14 lesson → S15 RACTOR close",
+  },
+  {
+    id: "ShowcaseKinetic",
+    title: "Showcase — Kinetic Type",
+    format: "16:9 · 1920×1080",
+    use: "YouTube / landscape / brand film",
+    width: 1920,
+    height: 1080,
+    fps: 60,
+    seconds: 12,
+    component: ShowcaseKinetic,
+    renderCmd: "npm run render:showcase",
+    scenes: "0–3.6s headline reveal → 3.6–7.2s 3 rules → 7.2–10s 60fps count-up → 10–12s final hold",
+  },
+  {
+    id: "ShortHook",
+    title: "Short — Hook Machine",
+    format: "9:16 · 1080×1920",
+    use: "Shorts / Reels / TikTok",
+    width: 1080,
+    height: 1920,
+    fps: 30,
+    seconds: 15,
+    component: ShortHook,
+    renderCmd: "npm run render:short",
+    scenes: "0–3s HOOK → 3–7s problem → 7–12s fix → 12–15s payoff + loop CTA · word-by-word captions",
+  },
+  {
+    id: "DataStory",
+    title: "Data Story — Chart Film",
+    format: "1:1 · 1080×1080",
+    use: "Feed post / LinkedIn / X",
+    width: 1080,
+    height: 1080,
+    fps: 30,
+    seconds: 10,
+    component: DataStory,
+    renderCmd: "npm run render:data",
+    scenes: "title → bars spring-grow + SVG line draw-on → 128K count-up → final hold",
+  },
+];
+
+const PIPELINE = [
+  ["01", "Story", "Aap sirf story/idea doge — 20s, 30s, 1min, Short ya YouTube."],
+  ["02", "Document pehle", "Brief → research → hook → script → storyboard (har frame: camera, transition, sound) — productions/ me save, aapka review."],
+  ["03", "Timeline", "Har beat seconds me timeline me lock. Picture, captions, sound sab ek hi timeline padhte hain."],
+  ["04", "Build", "Remotion compositions: easing, springs, stagger, SVG draw, virtual camera — koi linear/sasta motion nahi."],
+  ["05", "Review loop", "Draft render → frame-by-frame check (contact-sheet style) → fix → phir final."],
+  ["06", "Final MP4", "30/60fps H.264 render + sound mix (-14 LUFS). Review ke baad hi final."],
+];
+
+export const App: React.FC = () => {
+  const [active, setActive] = useState<Comp>(COMPS[0]);
+  const Cmp = active.component;
+  const vertical = active.height > active.width;
+
+  return (
+    <div className="page">
+      <header className="top">
+        <div className="brand">
+          <span className="dot" /> HELLO MOTION STUDIO
+        </div>
+        <div className="top-links">
+          <span>Remotion · React → MP4</span>
+          <span className="accent">LIVE PREVIEW</span>
+        </div>
+      </header>
+
+      <section className="hero">
+        <h1>
+          Code se <em>real</em> motion graphics.
+        </h1>
+        <p>
+          Ye live preview hai — neeche ka player asal Remotion composition chala raha hai (video file nahi).
+          Jo yahan dikhega, frame-by-frame wahi MP4 me render hoga. Composition chuno, play karo, scrub karo.
+        </p>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/001-chatgpt-google-9x16-v1.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">✅ FINAL RENDERED VIDEO · P001</span>
+          <h2>ChatGPT × Google Connect</h2>
+          <p>
+            Ye upar webpage par hi <strong>asli rendered MP4</strong> chal raha hai — yahi file
+            Shorts/Reels par upload hogi. Play karke yahi preview kar lo (sound on 🔊),
+            pasand aaye to neeche se download kar lo.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>50 seconds</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 30 FPS · H.264 + AAC</dd></div>
+            <div><dt>Sound</dt><dd>Music + SFX included (−14.3 LUFS)</dd></div>
+            <div><dt>File size</dt><dd>~22 MB</dd></div>
+          </dl>
+          <a className="download-btn" href="/videos/001-chatgpt-google-9x16-v1.mp4" download="001-chatgpt-google-9x16-v1.mp4">
+            ⬇ Download MP4
+          </a>
+          <p className="note">Neeche wala player live-code preview hai (scenes badalne ke liye); ye wala final file hai.</p>
+        </div>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/asi05-premium.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">✅ PREMIUM REBUILD · ASI05 · FULL EPISODE</span>
+          <h2>The Repair That Ran — Premium</h2>
+          <p>
+            Wahi kahani, ab studio-finish ke saath: chhupa hua hukm pehle ek <strong>alag copy</strong> banta hai,
+            agent <strong>khud script likhta aur chalata hai</strong>, secret ki copy bahar jaati hai — phir ek saaf
+            <strong> Replay</strong> me wahi code chalta hai, lekin is baar na secret milta hai, na raasta khula.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>75 seconds · 4500 frames · 15 shots</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 yuv420p · silent</dd></div>
+            <div><dt>Status</dt><dd>Premium v1 rendered and frame-checked</dd></div>
+          </dl>
+          <a className="download-btn" href="/videos/asi05-premium.mp4" download="asi05-premium.mp4">
+            ⬇ Download MP4
+          </a>
+          <p className="note">Neeche purane proof/v1 sirf compare ke liye rakhe hain.</p>
+        </div>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/asi05v2-proof-s03-s05.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">🎬 MOTION PROOF · ASI05 v2 (Director's Bible) · Gate 3</span>
+          <h2>The Repair That Ran — v2 motion proof (S03–S05)</h2>
+          <p>
+            Ye pura episode <strong>nahi</strong> hai — sirf sabse mushkil harkat ka saboot hai:
+            bahari report me chhupa hua hukm, uski <strong>alag copy strip</strong> editor tak jaati hai,
+            agent <strong>khud naya script likhta hai</strong>, phir use dock karke <strong>RUN dabata hai</strong>.
+            RUNNING keval dabane ke <em>baad</em> aata hai. Isi quality par pura episode banega.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>17.5 seconds · frames 600–1649 (shots S03, S04, S05)</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · silent proof</dd></div>
+            <div><dt>Status</dt><dd>Gate 3 — motion review pending; full render abhi nahi hua</dd></div>
+          </dl>
+          <p className="note">Neeche wala video purana v1 hai (reject ho chuka) — sirf compare ke liye rakha hai.</p>
+        </div>
+      </section>
+
+      <section className="final-video">
+        <div className="final-player">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            src="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4"
+          />
+        </div>
+        <div className="final-info">
+          <span className="final-tag">✅ FINAL RENDERED VIDEO · ASI05 · RACTOR</span>
+          <h2>The Repair That Ran</h2>
+          <p>
+            Ek error report ke andar chhupa repair, agent se code likhva kar <strong>project secret
+            chura kar bahar bhej deta hai</strong> — phir wahi code restricted workspace me dobara
+            chalta hai, aur is baar secret bhi nahi milta, raasta bhi band milta hai.
+            Generated code is untrusted — limit what it can reach.
+          </p>
+          <dl>
+            <div><dt>Duration</dt><dd>75 seconds · 15 shots (DIRECTOR-NOTE ke exact timings)</dd></div>
+            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 + AAC</dd></div>
+            <div><dt>Sound</dt><dd>Silent by design (director note: sound alag pass hai)</dd></div>
+            <div><dt>File size</dt><dd>~5.4 MB</dd></div>
+          </dl>
+          <a className="download-btn" href="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4" download="002-asi05-the-repair-that-ran-9x16-v1.mp4">
+            ⬇ Download MP4
+          </a>
+          <p className="note">Direction: productions/002-asi05-the-repair-that-ran/00-DIRECTOR-NOTE.md · neeche live-code player me yehi episode frame-by-frame scrub bhi kar sakte ho.</p>
+        </div>
+      </section>
+
+      <nav className="switcher">
+        {COMPS.map((c) => (
+          <button
+            key={c.id}
+            className={c.id === active.id ? "card on" : "card"}
+            onClick={() => setActive(c)}
+          >
+            <strong>{c.title}</strong>
+            <span>{c.format}</span>
+            <span>
+              {c.fps} FPS · {c.seconds}s · {c.use}
+            </span>
+          </button>
+        ))}
+      </nav>
+
+      <section className={vertical ? "stage vertical" : "stage"}>
+        <div className="player-wrap">
+          <Player
+            component={Cmp}
+            durationInFrames={active.seconds * active.fps}
+            fps={active.fps}
+            compositionWidth={active.width}
+            compositionHeight={active.height}
+            controls
+            loop
+            autoPlay
+            clickToPlay
+            doubleClickToFullscreen
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+        <aside className="specs">
+          <h2>{active.title}</h2>
+          <dl>
+            <div><dt>Format</dt><dd>{active.format}</dd></div>
+            <div><dt>Frame rate</dt><dd>{active.fps} FPS ({active.seconds * active.fps} frames)</dd></div>
+            <div><dt>Duration</dt><dd>{active.seconds} seconds</dd></div>
+            <div><dt>Best for</dt><dd>{active.use}</dd></div>
+            <div><dt>Scenes</dt><dd>{active.scenes}</dd></div>
+          </dl>
+          <div className="cmd">
+            <span>Final MP4 render:</span>
+            <code>{active.renderCmd}</code>
+          </div>
+          <p className="note">
+            Preview browser me live render hota hai isliye kabhi halka sa rough lag sakta hai —
+            final MP4 har frame ko Chromium se render karke banta hai (buttery 30/60fps, koi jank nahi).
+          </p>
+        </aside>
+      </section>
+
+      <section className="pipeline">
+        <h2>Story → Video: hamara production pipeline</h2>
+        <div className="steps">
+          {PIPELINE.map(([n, h, d]) => (
+            <div className="step" key={n}>
+              <span>{n}</span>
+              <strong>{h}</strong>
+              <p>{d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="foot">
+        <p>
+          Workspace ready hai. Ab bas <strong>apni pehli story do</strong> (20s / 30s / 1min — Short ya YouTube),
+          main pehle pura document (script + storyboard) bana ke dunga, review ke baad hi video banega.
+        </p>
+        <code>npm run studio</code> <span>· Remotion Studio (frame-by-frame edit/preview)</span>
+        <br />
+        <code>npm run render:all</code> <span>· teeno demos ke final MP4 (out/ folder me)</span>
+      </footer>
+    </div>
+  );
+};
