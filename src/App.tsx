@@ -75,6 +75,45 @@ const COMPS: Comp[] = [
   },
 ];
 
+const WALKTHROUGHS = [
+  {
+    id: "asi05",
+    tag: "📖 WALKTHROUGH · ASI05 PREMIUM",
+    title: "The Repair That Ran — shot-by-shot guide",
+    cover: "/images/walkthroughs/asi05-premium-cover.jpg",
+    meta: "75s · 15 shots · 60 FPS · silent",
+    points:
+      "Kaunsa frame par copy banti hai, RUN kab sach me dabta hai, aur Replay me kya badla — har shot ka time, frame aur matlab ek saath.",
+    watch: "/videos/asi05-premium.mp4",
+    watchLabel: "▶ Video dekho",
+    doc: "productions/002-asi05-the-repair-that-ran/05-walkthrough.md",
+  },
+  {
+    id: "p001",
+    tag: "📖 WALKTHROUGH · P001",
+    title: "ChatGPT × Google Connect — step-by-step guide",
+    cover: "/images/walkthroughs/p001-chatgpt-google-cover.jpg",
+    meta: "50s · 9:16 · 30 FPS · music + SFX",
+    points:
+      "Hook se permission wali line tak — har scene kyon wahan hai, kahan rukna hai, aur connect karne se pehle kya padhna hai.",
+    watch: "/videos/001-chatgpt-google-9x16-v1.mp4",
+    watchLabel: "▶ Video dekho",
+    doc: "productions/001-chatgpt-google-connect/04-walkthrough.md",
+  },
+  {
+    id: "demos",
+    tag: "📖 WALKTHROUGH · DEMO LAB",
+    title: "Showcase · ShortHook · DataStory — teen hunar",
+    cover: "/images/walkthroughs/motion-studio-walkthrough-cover.jpg",
+    meta: "Live Remotion player · neeche switcher se chuno",
+    points:
+      "Pehchan (kinetic type), dhyaan (3-second hook), aur saboot (data ko ehsaas) — teenon demos ka purpose aur review tareeka.",
+    watch: "#live-demos",
+    watchLabel: "▶ Live player par jao",
+    doc: "docs/19-DEMO-COMPOSITIONS-WALKTHROUGH.md",
+  },
+];
+
 const PIPELINE = [
   ["01", "Story", "Aap sirf story/idea doge — 20s, 30s, 1min, Short ya YouTube."],
   ["02", "Document pehle", "Brief → research → hook → script → storyboard (har frame: camera, transition, sound) — productions/ me save, aapka review."],
@@ -108,6 +147,37 @@ export const App: React.FC = () => {
         <p>
           Ye live preview hai — neeche ka player asal Remotion composition chala raha hai (video file nahi).
           Jo yahan dikhega, frame-by-frame wahi MP4 me render hoga. Composition chuno, play karo, scrub karo.
+        </p>
+      </section>
+
+      <section className="walkthroughs" id="walkthroughs">
+        <h2>Walkthroughs — animation ke saath, samajh bhi</h2>
+        <p className="walkthrough-intro">
+          Sirf video dekhna kaafi nahi. Har badi animation ke saath ek written walkthrough hai:
+          shot-by-shot time/frame, kahan rukna hai, kya notice karna hai, aur kaunsi galti kabhi
+          screen par nahi aani chahiye. Pehle normal speed dekho, phir guide ke pause points par
+          ruk kar verify karo.
+        </p>
+        <div className="walkthrough-grid">
+          {WALKTHROUGHS.map((w) => (
+            <article className="walkthrough-card" key={w.id}>
+              <img src={w.cover} alt={`${w.title} — cover art`} loading="lazy" />
+              <span className="final-tag">{w.tag}</span>
+              <h3>{w.title}</h3>
+              <p className="walkthrough-meta">{w.meta}</p>
+              <p>{w.points}</p>
+              <a className="walkthrough-btn" href={w.watch}>
+                {w.watchLabel}
+              </a>
+              <p className="note">
+                Guide repo me: <code>{w.doc}</code>
+              </p>
+            </article>
+          ))}
+        </div>
+        <p className="note">
+          Saari guides ek jagah: <code>docs/17-WALKTHROUGHS-index.md</code> · Aage ka genuine
+          kaam: <code>docs/18-CONTRIBUTION-BACKLOG-50.md</code> (50 real tasks — fake commits nahi).
         </p>
       </section>
 
@@ -228,7 +298,7 @@ export const App: React.FC = () => {
         </div>
       </section>
 
-      <nav className="switcher">
+      <nav className="switcher" id="live-demos">
         {COMPS.map((c) => (
           <button
             key={c.id}
