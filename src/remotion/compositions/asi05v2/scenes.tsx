@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
-import { easeInOut, easeIn, easeOut, prog } from "../../lib/timing";
+import { easeInOut, easeIn } from "../../lib/timing";
 import { Robot, Capsule, Human } from "./parts";
 import { P, R, fp } from "./theme";
 import { Tx } from "./parts";

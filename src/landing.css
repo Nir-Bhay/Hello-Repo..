@@ -1,3 +1,4 @@
+/* ============ Base ============ */
 :root {
   --bg: #0b0b10;
   --panel: #12121a;
@@ -23,6 +24,7 @@ body {
 .hero h1 { font-size: clamp(38px, 6vw, 74px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 16px; }
 .hero h1 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; color: var(--accent); }
 .hero p { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 760px; }
+/* ============ Rendered video sections ============ */
 .final-video { display: grid; grid-template-columns: minmax(280px, 420px) 1fr; gap: 22px; align-items: start; margin-bottom: 34px; background: rgba(18,18,26,.8); border: 1px solid var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 18px 50px rgba(255,92,56,.10); border-radius: 20px; padding: 20px; }
 .final-player video { width: 100%; max-height: 72vh; border-radius: 14px; background: #000; display: block; }
 .final-tag { font-family: "JetBrains Mono", monospace; font-size: 12px; letter-spacing: .16em; color: var(--accent); }
@@ -34,6 +36,7 @@ body {
 .final-info dd { margin: 0; font-size: 15px; }
 .download-btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 800; font-size: 17px; padding: 14px 30px; border-radius: 999px; box-shadow: 0 10px 30px rgba(255,92,56,.35); }
 .download-btn:hover { filter: brightness(1.08); }
+/* ============ Live demo player ============ */
 .switcher { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
 .card { text-align: left; background: rgba(18,18,26,.8); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; color: var(--muted); cursor: pointer; display: flex; flex-direction: column; gap: 5px; font: inherit; }
 .card strong { color: var(--paper); font-size: 16px; }
@@ -52,6 +55,7 @@ body {
 .cmd code, .foot code { background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 13px; }
 .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
 a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+/* ============ Walkthrough cards ============ */
 .walkthroughs { margin: 0 0 34px; }
 .walkthroughs h2 { font-size: 28px; letter-spacing: -0.01em; margin: 0 0 10px; }
 .walkthrough-intro { color: var(--muted); font-size: 15.5px; line-height: 1.65; max-width: 820px; margin: 0 0 18px; }
@@ -65,6 +69,7 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
 .walkthrough-btn:hover { filter: brightness(1.08); }
 .walkthrough-card code { background: #000; border: 1px solid var(--line); border-radius: 6px; padding: 2px 6px; color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 12px; word-break: break-all; }
 .walkthroughs .note code { background: #000; border: 1px solid var(--line); border-radius: 6px; padding: 2px 6px; color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 12px; }
+/* ============ Pipeline + footer ============ */
 .pipeline { margin-top: 44px; }
 .pipeline h2 { font-size: 28px; letter-spacing: -0.01em; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -74,6 +79,7 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
 .step p { color: var(--muted); line-height: 1.55; margin: 0; font-size: 14px; }
 .foot { margin-top: 40px; border: 1px solid var(--line); border-radius: 18px; padding: 24px; background: rgba(18,18,26,.8); line-height: 2; color: var(--muted); }
 .foot p { color: var(--paper); font-size: 17px; line-height: 1.6; margin-top: 0; }
+/* ============ Responsive + accessibility ============ */
 @media (max-width: 900px) {
   .switcher, .steps, .stage, .walkthrough-grid, .final-video { grid-template-columns: 1fr; }
   .stage.vertical .player-wrap { margin: 0 auto; width: 100%; }
