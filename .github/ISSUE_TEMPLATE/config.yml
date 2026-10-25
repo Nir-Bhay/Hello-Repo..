@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Walkthrough index
+    url: https://github.com/Nir-Bhay/motion-studio/blob/main/docs/17-WALKTHROUGHS-index.md
+    about: Pehle dekho ki tumhara sawal kisi walkthrough me jawab to nahi rakhta
+  - name: Contribution backlog (50 tasks)
+    url: https://github.com/Nir-Bhay/motion-studio/blob/main/docs/18-CONTRIBUTION-BACKLOG-50.md
+    about: Naya kaam shuru karne se pehle yahan se task chuno
