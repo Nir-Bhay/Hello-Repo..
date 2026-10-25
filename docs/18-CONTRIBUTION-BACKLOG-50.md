@@ -29,14 +29,14 @@
 
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
-| C09 | Fresh-clone quickstart verify karna | Ready | `npm install → preview → studio → typecheck` naye clone par chale; README steps sahi hon |
-| C10 | Docs link-check script | Ready | Repo ke saare internal Markdown links tootey hue milein to script fail ho |
-| C11 | `CONTRIBUTING.md` banana | Ready | Branch, commit, PR, review, evidence rules ek file me; backlog se link |
-| C12 | GitHub issue templates | Ready | Bug / unclear-frame / documentation / feature — chaar templates `.github/ISSUE_TEMPLATE/` me |
-| C13 | Pull request template | Ready | Summary, verification, screenshots/frames, risk — PR kholte hi template aaye |
-| C14 | Production index table | Ready | Har production: status, duration, format, final file, walkthrough — ek table `productions/README.md` me |
-| C15 | Cybersecurity glossary (ASI series) | Ready | ASI05 ke terms — generated code, secret, boundary, replay — aam bhasha me |
-| C16 | On-screen copy transcript index | Ready | Har video ke exact on-screen shabd ek jagah; ASI05 ledger se mismatch = 0 |
+| C09 | Fresh-clone quickstart verify karna | Verification pending (is PR me step chalega) | `npm install → preview → studio → typecheck` naye clone par chale; README steps sahi hon |
+| C10 | Docs link-check script | ✅ Done | Repo ke saare internal Markdown links tootey hue milein to script fail ho |
+| C11 | `CONTRIBUTING.md` banana | ✅ Done | Branch, commit, PR, review, evidence rules ek file me; backlog se link |
+| C12 | GitHub issue templates | ✅ Done | Bug / unclear-frame / documentation / feature — chaar templates `.github/ISSUE_TEMPLATE/` me |
+| C13 | Pull request template | ✅ Done | Summary, verification, screenshots/frames, risk — PR kholte hi template aaye |
+| C14 | Production index table | ✅ Done | Har production: status, duration, format, final file, walkthrough — ek table `productions/README.md` me |
+| C15 | Cybersecurity glossary (ASI series) | ✅ Done | ASI05 ke terms — generated code, secret, boundary, replay — aam bhasha me |
+| C16 | On-screen copy transcript index | ✅ Done | Har video ke exact on-screen shabd ek jagah; ASI05 ledger se mismatch = 0 |
 
 ## Batch 3 — Accessibility & viewer experience
 
@@ -92,12 +92,19 @@
 | C49 | Quarterly docs review ritual | Planned | Har quarter docs/ links, status aur stale claims ki check — checklist doc |
 | C50 | Portfolio case-study page | Planned | Ek page: problem → process → evidence → final video → seekh |
 
-## Pehla batch (is PR) me kya-kya hua
+## Ab tak kya ho chuka hai (is PR me)
 
+**Batch 1 — Walkthrough foundation:**
 - Walkthrough hub + 3 detailed guides + demo guide.
 - 3 cover images (AI-generated, palette-locked, bina readable gibberish text ke).
 - Landing page par walkthrough section (cover cards ke saath).
 - Productions README me walkthrough convention.
 - Ye 50-task backlog — aage ka saara kaam yahin se uthega, ek-ek karke, review ke saath.
 
-**Agla kadam:** Batch 2 se C09/C11/C13 pehle uthao — ye teeno milkar repo ko “koi bhi naya contributor aakar kaam kar sake” wali haalat me le aayenge.
+**Batch 2 — Documentation & discoverability:**
+- `CONTRIBUTING.md` (C11), PR template (C13), 4 issue templates (C12).
+- `npm run check:links` — internal Markdown link checker, bina dependency (C10).
+- Glossary (C15) aur exact on-screen copy index (C16); production index पहले se मौजूद (C14).
+- C09 (fresh-clone quickstart) ki verification isi PR ka aakhri step hai.
+
+**Agla kadam:** Batch 3 — accessibility & viewer experience (C17–C24). Usme sabse pehle C22 (video posters) aur C18 (ASI05 text transcript) uthana sabse zyada fayda dega, kyunki dono seedha viewer ke kaam ke hain.
