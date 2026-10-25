@@ -70,12 +70,12 @@
 |---|---|---|---|
 | C33 | Render-metadata verification script | Planned | Ek command MP4 ka width/height/fps/frame-count/duration report kare |
 | C34 | Frame-extraction QA script | Planned | Diye gaye frame numbers par stills + contact sheet auto bane |
-| C35 | GitHub Actions: typecheck + build | Planned | Har PR par `tsc --noEmit` aur preview build auto chale |
-| C36 | Internal-link CI check | Planned | Toota Markdown link PR ko fail kare (C10 ka CI version) |
-| C37 | Public asset size budget | Planned | `public/videos` + images ka size report; budget cross = warning |
+| C35 | GitHub Actions: typecheck + build | ⛔ Blocked (workflows permission; ready file docs/25 me) | Har PR par `tsc --noEmit` aur preview build auto chale |
+| C36 | Internal-link CI check | ⛔ Blocked (C35 ke saath hi lagega) | Toota Markdown link PR ko fail kare (C10 ka CI version) |
+| C37 | Public asset size budget | ✅ Done | `public/videos` + images ka size report; budget cross = warning |
 | C38 | Visual-regression still checklist | Planned | Har composition ke hero frames ki checklist; change par before/after |
-| C39 | Browser smoke-test checklist | Planned | Landing ke saare players play/pause/scrub karein — manual checklist doc |
-| C40 | Release checklist template | Planned | Final render → verify → copy → landing → PR — ek reusable checklist |
+| C39 | Browser smoke-test checklist | ✅ Done | Landing ke saare players play/pause/scrub karein — manual checklist doc |
+| C40 | Release checklist template | ✅ Done | Final render → verify → copy → landing → PR — ek reusable checklist |
 
 ## Batch 6 — New content & walkthrough videos
 
@@ -119,4 +119,10 @@
 - Registry + dead-code audit: `docs/23-COMPOSITION-REGISTRY-AND-DEAD-CODE-AUDIT.md` (C27, C31). Sakht unused-check (`tsc --noUnusedLocals --noUnusedParameters`) ab clean hai; ASI05 ke version labels Root/landing/docs teeno jagah saaf hain (C28); landing CSS section comments ke saath organized hai (C32).
 - **C29 (lint/format tool) abhi bhi Planned hai** — ESLint/Prettier jodna ek dependency faisla hai; bina soche tool ghusana sahi nahi, isliye use jhootha Done nahi kiya gaya.
 
-**Agla kadam:** Batch 5 — testing, QA & automation (C33–C40). Usme sabse pehle C35+C36 (GitHub Actions: typecheck + build + link-check) aur C37 (asset size budget) uthenge, kyunki ye har aane wale PR ko khud jaanchne lagenge.
+**Batch 5 — Testing, QA & automation (jo is environment me ho sakta tha):**
+- GitHub Actions CI ka workflow **ready hai lekin Blocked hai**: push token ke paas `workflows` permission nahi mili. Exact file aur unblock steps: `docs/25-CI-WORKFLOW-PLAN.md` (C35, C36). Permission milte hi ek commit me lag jayega.
+- `npm run report:assets` — public media ka size report, budget warning ke saath (C37).
+- Browser smoke-test checklist `docs/24` (C39) aur release checklist `templates/06` (C40).
+- **C33 (render-metadata script), C34 (frame-extraction script) aur C38 (visual-regression stills) abhi Planned hain** — inhe ffmpeg/render infra wali sitting chahiye; aadha-adhoora script jhootha Done kehna sahi nahi hoga.
+
+**Agla kadam:** Batch 6 — nayi content (C41–C50), jisme sabse pehla asal kaam hai **ASI04 ka brief (C41)**; uske liye story ki disha user se confirm hogi, phir pehle document banega, video baad me. Uske saath bache hue C29/C33/C34/C38 infra wali sitting me uthenge.
