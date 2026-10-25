@@ -33,6 +33,12 @@ Walkthroughs sirf padhne ke liye nahi hain — ye contribution ka pehla darwaza 
 
 50 genuine contribution tasks ki prioritized list: [`docs/18-CONTRIBUTION-BACKLOG-50.md`](18-CONTRIBUTION-BACKLOG-50.md)
 
+**Saath me ye bhi rakha hai:**
+
+- [`CONTRIBUTING.md`](../CONTRIBUTING.md) — kaam shuru karne ke niyam: branch, commit, PR, frame-evidence.
+- [`docs/20-GLOSSARY-cybersecurity.md`](20-GLOSSARY-cybersecurity.md) — ASI series ke shabd aam bhasha me.
+- [`docs/21-ON-SCREEN-COPY-TRANSCRIPTS.md`](21-ON-SCREEN-COPY-TRANSCRIPTS.md) — har video ke exact on-screen shabd ek jagah.
+
 **Seedha rule:** number badhane ke liye fake chhote commits nahi. Har commit ek saaf, useful, reviewable change hoga — bug fix, test, documentation improvement, accessibility fix, ya naya feature.
 
 ## Honest status board

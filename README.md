@@ -34,6 +34,8 @@ Landing page par bhi walkthrough cards hain (cover image + video/live links ke s
 
 Repo me aage ka saara genuine kaam ek prioritized list se uthega: **[docs/18-CONTRIBUTION-BACKLOG-50.md](docs/18-CONTRIBUTION-BACKLOG-50.md)** — 50 real tasks, har ek ke acceptance criteria ke saath. Number badhane ke liye fake commits nahi; har commit ek saaf, useful, reviewable change.
 
+Contribution shuru karna hai? Pehle **[CONTRIBUTING.md](CONTRIBUTING.md)** padho. ASI ke shabd samajhne ke liye [docs/20-GLOSSARY-cybersecurity.md](docs/20-GLOSSARY-cybersecurity.md), aur har video ke exact on-screen shabd ke liye [docs/21-ON-SCREEN-COPY-TRANSCRIPTS.md](docs/21-ON-SCREEN-COPY-TRANSCRIPTS.md).
+
 ## 🛠 Kaam kaise hota hai (Story → Video)
 
 ```
