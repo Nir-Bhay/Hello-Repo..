@@ -42,14 +42,14 @@
 
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
-| C17 | P001 ke liye captions/transcript file | Planned | Har line ka time-coded transcript; video ke text se match |
-| C18 | ASI05 silent-video text transcript | Planned | 15 shots ke exact on-screen copy + pause-point notes ek file me |
-| C19 | Landing page alt-text audit | Planned | Har image/video ke paas meaningful alt/label; decorative images marked |
-| C20 | Keyboard-only landing review | Planned | Tab se saare players/buttons reachable; focus visibly dikhe |
-| C21 | Mobile viewing QA checklist | Planned | 360px–430px width par text readable, koi overlap nahi — checklist + evidence |
-| C22 | Video poster frames set karna | Planned | Har `<video>` par cover/poster; play se pehle blank/black frame nahi |
-| C23 | Download filename consistency | Planned | Landing download naam = production file naam; purane naam redirect/note ke saath |
-| C24 | Reduced-motion note + preference respect | Planned | Landing par motion-sensitive viewers ke liye guidance; jahan mumkin ho respect |
+| C17 | P001 ke liye captions/transcript file | ✅ Done | Har line ka time-coded transcript; video ke text se match |
+| C18 | ASI05 silent-video text transcript | ✅ Done | 15 shots ke exact on-screen copy + pause-point notes ek file me |
+| C19 | Landing page alt-text audit | ✅ Done | Har image/video ke paas meaningful alt/label; decorative images marked |
+| C20 | Keyboard-only landing review | ✅ Done (focus visible; haath ki checklist docs/22 me) | Tab se saare players/buttons reachable; focus visibly dikhe |
+| C21 | Mobile viewing QA checklist | ✅ Done (checklist + responsive fix; asal phone par user test baaki) | 360px–430px width par text readable, koi overlap nahi — checklist + evidence |
+| C22 | Video poster frames set karna | ✅ Done | Har `<video>` par cover/poster; play se pehle blank/black frame nahi |
+| C23 | Download filename consistency | ✅ Done | Landing download naam = production file naam; purane naam redirect/note ke saath |
+| C24 | Reduced-motion note + preference respect | ✅ Done | Landing par motion-sensitive viewers ke liye guidance; jahan mumkin ho respect |
 
 ## Batch 4 — Code quality & maintainability
 
@@ -107,4 +107,10 @@
 - Glossary (C15) aur exact on-screen copy index (C16); production index पहले se मौजूद (C14).
 - C09 verified hai: bilkul naye clone par `npm ci`, link-check, typecheck, build, preview (HTTP 200) aur Remotion Studio boot (HTTP 200) — sab chala.
 
-**Agla kadam:** Batch 3 — accessibility & viewer experience (C17–C24). Usme sabse pehle C22 (video posters) aur C18 (ASI05 text transcript) uthana sabse zyada fayda dega, kyunki dono seedha viewer ke kaam ke hain.
+**Batch 3 — Accessibility & viewer experience:**
+- P001 transcript (C17) aur ASI05 silent-video transcript (C18) — dono production folders me, exact on-screen shabd ke saath.
+- Har video par poster (C22) aur aria-label (C19); ASI05 premium ka download naam production file se match (C23).
+- Keyboard focus ab har jagah dikhta hai aur live player OS ki reduced-motion setting par autoplay band kar deta hai (C20, C24).
+- Mobile/accessibility checklist: `docs/22-ACCESSIBILITY-AND-MOBILE-QA.md` (C21) — asal haath ki keyboard/phone QA ke box wahi bhare jayenge.
+
+**Agla kadam:** Batch 4 — code quality & maintainability (C25–C32). Usme sabse pehle C26 (walkthrough metadata ko typed data file me) aur C30 (ASI05 shot boundaries ek jagah) uthana sahi rahega, kyunki ye dono aage ke har badlav ko surakshit banayenge.
