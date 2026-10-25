@@ -55,14 +55,14 @@
 
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
-| C25 | Final-video section ko reusable component banana | Planned | App.tsx me duplication kam; teenon video sections ek component se render hon |
-| C26 | Walkthrough metadata ko typed data file me le jana | Planned | Cards data se banein; TypeScript type har field ko lock kare |
-| C27 | Composition registry audit | Planned | Root.tsx ki har composition landing/docs se discoverable; dead sample clearly labelled |
-| C28 | ASI05 v1/v2/premium version labelling saaf karna | Planned | Har version ke bagal “rejected / proof / final” status; confusion = 0 |
+| C25 | Final-video section ko reusable component banana | ✅ Done | App.tsx me duplication kam; teenon video sections ek component se render hon |
+| C26 | Walkthrough metadata ko typed data file me le jana | ✅ Done | Cards data se banein; TypeScript type har field ko lock kare |
+| C27 | Composition registry audit | ✅ Done | Root.tsx ki har composition landing/docs se discoverable; dead sample clearly labelled |
+| C28 | ASI05 v1/v2/premium version labelling saaf karna | ✅ Done | Har version ke bagal “rejected / proof / final” status; confusion = 0 |
 | C29 | Lint + format configuration | Planned | Ek command se lint/format check; existing code bina bade diff ke pass |
-| C30 | Shared constants: durations & shot boundaries | Planned | ASI05 shot boundaries ek jagah se aayein; walkthrough table se match |
-| C31 | Dead-code audit | Planned | Unused imports/files ki list; हटाना sirf proof ke saath |
-| C32 | Landing CSS ko sections me organize karna | Planned | Walkthrough/video/pipeline styles alag blocks me; visual diff = 0 |
+| C30 | Shared constants: durations & shot boundaries | ✅ Done | ASI05 shot boundaries ek jagah se aayein; walkthrough table se match |
+| C31 | Dead-code audit | ✅ Done | Unused imports/files ki list; हटाना sirf proof ke saath |
+| C32 | Landing CSS ko sections me organize karna | ✅ Done | Walkthrough/video/pipeline styles alag blocks me; visual diff = 0 |
 
 ## Batch 5 — Testing, QA & automation
 
@@ -113,4 +113,10 @@
 - Keyboard focus ab har jagah dikhta hai aur live player OS ki reduced-motion setting par autoplay band kar deta hai (C20, C24).
 - Mobile/accessibility checklist: `docs/22-ACCESSIBILITY-AND-MOBILE-QA.md` (C21) — asal haath ki keyboard/phone QA ke box wahi bhare jayenge.
 
-**Agla kadam:** Batch 4 — code quality & maintainability (C25–C32). Usme sabse pehle C26 (walkthrough metadata ko typed data file me) aur C30 (ASI05 shot boundaries ek jagah) uthana sahi rahega, kyunki ye dono aage ke har badlav ko surakshit banayenge.
+**Batch 4 — Code quality & maintainability:**
+- Landing ke chaaro rendered-video sections ab ek hi `FinalVideoSection` component se bante hain (C25); walkthrough cards ka data typed file `src/data/walkthroughs.ts` me hai (C26).
+- ASI05 ki shot boundaries ab ek hi jagah hain — `asi05v3/shots.ts` — composition aur Root dono wahi se padhte hain (C30).
+- Registry + dead-code audit: `docs/23-COMPOSITION-REGISTRY-AND-DEAD-CODE-AUDIT.md` (C27, C31). Sakht unused-check (`tsc --noUnusedLocals --noUnusedParameters`) ab clean hai; ASI05 ke version labels Root/landing/docs teeno jagah saaf hain (C28); landing CSS section comments ke saath organized hai (C32).
+- **C29 (lint/format tool) abhi bhi Planned hai** — ESLint/Prettier jodna ek dependency faisla hai; bina soche tool ghusana sahi nahi, isliye use jhootha Done nahi kiya gaya.
+
+**Agla kadam:** Batch 5 — testing, QA & automation (C33–C40). Usme sabse pehle C35+C36 (GitHub Actions: typecheck + build + link-check) aur C37 (asset size budget) uthenge, kyunki ye har aane wale PR ko khud jaanchne lagenge.
