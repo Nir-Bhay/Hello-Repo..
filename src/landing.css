@@ -55,6 +55,9 @@ body {
 .cmd code, .foot code { background: #000; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 13px; }
 .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
 a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.skip-link { position: absolute; left: 16px; top: -60px; z-index: 50; background: #c93e1f; color: #fff; padding: 10px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: top 0.15s ease; }
+.skip-link:focus-visible { top: 12px; }
+.foot a { color: var(--accent); }
 /* ============ Walkthrough cards ============ */
 .walkthroughs { margin: 0 0 34px; }
 .walkthroughs h2 { font-size: 28px; letter-spacing: -0.01em; margin: 0 0 10px; }

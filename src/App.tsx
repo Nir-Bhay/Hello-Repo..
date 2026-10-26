@@ -248,6 +248,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="page">
+      <a className="skip-link" href="#walkthroughs">
+        Seedha walkthroughs par jao ↓
+      </a>
       <header className="top">
         <div className="brand">
           <span className="dot" /> HELLO MOTION STUDIO
@@ -388,6 +391,12 @@ export const App: React.FC = () => {
         <code>npm run studio</code> <span>· Remotion Studio (frame-by-frame edit/preview)</span>
         <br />
         <code>npm run render:all</code> <span>· teeno demos ke final MP4 (out/ folder me)</span>
+        <p>
+          📖 <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/17-WALKTHROUGHS-index.md" target="_blank" rel="noreferrer">Saari walkthroughs ek jagah (index)</a>
+          {" · "}
+          🗂 <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/33-FINAL-ASSETS-INVENTORY.md" target="_blank" rel="noreferrer">Kaunsi file final hai — inventory</a>
+          <span> · Galat file upload karna sabse mehengi galti hai; pehle inventory dekho.</span>
+        </p>
       </footer>
     </div>
   );
