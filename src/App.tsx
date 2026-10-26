@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Player } from "@remotion/player";
 import { ShowcaseKinetic } from "./remotion/compositions/ShowcaseKinetic";
 import { ShortHook } from "./remotion/compositions/ShortHook";
 import { DataStory } from "./remotion/compositions/DataStory";
-import { P001ChatGptConnect } from "./remotion/compositions/P001ChatGptConnect";
 import { Asi05TheRepairThatRan } from "./remotion/compositions/asi05/Asi05";
+import { WALKTHROUGHS } from "./data/walkthroughs";
 
 type Comp = {
   id: string;
@@ -84,8 +84,158 @@ const PIPELINE = [
   ["06", "Final MP4", "30/60fps H.264 render + sound mix (-14 LUFS). Review ke baad hi final."],
 ];
 
+type FinalVideoSpec = {
+  id: string;
+  src: string;
+  poster: string;
+  ariaLabel: string;
+  tag: string;
+  title: string;
+  description: React.ReactNode;
+  specs: ReadonlyArray<readonly [string, string]>;
+  download?: { href: string; filename: string };
+  note: React.ReactNode;
+};
+
+/** Ek rendered-video section (C25) — P001, ASI05 premium, proof aur rejected v1 sab isi se bante hain. */
+const FinalVideoSection: React.FC<{ video: FinalVideoSpec }> = ({ video }) => (
+  <section className="final-video">
+    <div className="final-player">
+      <video
+        controls
+        playsInline
+        preload="metadata"
+        poster={video.poster}
+        aria-label={video.ariaLabel}
+        src={video.src}
+      />
+    </div>
+    <div className="final-info">
+      <span className="final-tag">{video.tag}</span>
+      <h2>{video.title}</h2>
+      <p>{video.description}</p>
+      <dl>
+        {video.specs.map(([term, value]) => (
+          <div key={term}>
+            <dt>{term}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+      {video.download ? (
+        <a className="download-btn" href={video.download.href} download={video.download.filename}>
+          ⬇ Download MP4
+        </a>
+      ) : null}
+      <p className="note">{video.note}</p>
+    </div>
+  </section>
+);
+
+const FINAL_VIDEOS: FinalVideoSpec[] = [
+  {
+    id: "p001-final",
+    src: "/videos/001-chatgpt-google-9x16-v1.mp4",
+    poster: "/images/walkthroughs/p001-chatgpt-google-cover.jpg",
+    ariaLabel: "P001 final rendered video: ChatGPT Google Connect se judta hai",
+    tag: "✅ FINAL RENDERED VIDEO · P001",
+    title: "ChatGPT × Google Connect",
+    description: (
+      <>
+        Ye upar webpage par hi <strong>asli rendered MP4</strong> chal raha hai — yahi file
+        Shorts/Reels par upload hogi. Play karke yahi preview kar lo (sound on 🔊),
+        pasand aaye to neeche se download kar lo.
+      </>
+    ),
+    specs: [
+      ["Duration", "50 seconds"],
+      ["Format", "9:16 · 1080×1920 · 30 FPS · H.264 + AAC"],
+      ["Sound", "Music + SFX included (−14.3 LUFS)"],
+      ["File size", "~22 MB"],
+    ],
+    download: { href: "/videos/001-chatgpt-google-9x16-v1.mp4", filename: "001-chatgpt-google-9x16-v1.mp4" },
+    note: "Neeche wala player live-code preview hai (scenes badalne ke liye); ye wala final file hai.",
+  },
+  {
+    id: "asi05-premium",
+    src: "/videos/asi05-premium.mp4",
+    poster: "/images/walkthroughs/asi05-premium-cover.jpg",
+    ariaLabel: "ASI05 premium episode: The Repair That Ran, silent 75 second video",
+    tag: "✅ PREMIUM REBUILD · ASI05 · FULL EPISODE",
+    title: "The Repair That Ran — Premium",
+    description: (
+      <>
+        Wahi kahani, ab studio-finish ke saath: chhupa hua hukm pehle ek <strong>alag copy</strong> banta hai,
+        agent <strong>khud script likhta aur chalata hai</strong>, secret ki copy bahar jaati hai — phir ek saaf
+        <strong> Replay</strong> me wahi code chalta hai, lekin is baar na secret milta hai, na raasta khula.
+      </>
+    ),
+    specs: [
+      ["Duration", "75 seconds · 4500 frames · 15 shots"],
+      ["Format", "9:16 · 1080×1920 · 60 FPS · H.264 yuv420p · silent"],
+      ["Status", "Premium v1 rendered and frame-checked"],
+    ],
+    download: { href: "/videos/asi05-premium.mp4", filename: "002-asi05-premium-9x16-v1.mp4" },
+    note: "Neeche purane proof/v1 sirf compare ke liye rakhe hain.",
+  },
+  {
+    id: "asi05-v2-proof",
+    src: "/videos/asi05v2-proof-s03-s05.mp4",
+    poster: "/images/walkthroughs/asi05-premium-cover.jpg",
+    ariaLabel: "ASI05 v2 motion proof, sirf shots S03 se S05",
+    tag: "🎬 MOTION PROOF · ASI05 v2 (Director's Bible) · Gate 3",
+    title: "The Repair That Ran — v2 motion proof (S03–S05)",
+    description: (
+      <>
+        Ye pura episode <strong>nahi</strong> hai — sirf sabse mushkil harkat ka saboot hai:
+        bahari report me chhupa hua hukm, uski <strong>alag copy strip</strong> editor tak jaati hai,
+        agent <strong>khud naya script likhta hai</strong>, phir use dock karke <strong>RUN dabata hai</strong>.
+        RUNNING keval dabane ke <em>baad</em> aata hai. Isi quality par pura episode banega.
+      </>
+    ),
+    specs: [
+      ["Duration", "17.5 seconds · frames 600–1649 (shots S03, S04, S05)"],
+      ["Format", "9:16 · 1080×1920 · 60 FPS · silent proof"],
+      ["Status", "Gate 3 proof — Premium ne ise supersede kar diya; saboot ke liye retained"],
+    ],
+    note: "Neeche wala video purana v1 hai (reject ho chuka) — sirf compare ke liye rakha hai.",
+  },
+  {
+    id: "asi05-v1-rejected",
+    src: "/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4",
+    poster: "/images/walkthroughs/asi05-premium-cover.jpg",
+    ariaLabel: "ASI05 purana v1 video, reject ho chuka, sirf compare ke liye",
+    tag: "🗂 ASI05 v1 · REJECTED · SIRF COMPARE KE LIYE",
+    title: "The Repair That Ran — v1 (rejected)",
+    description: (
+      <>
+        Ek error report ke andar chhupa repair, agent se code likhva kar <strong>project secret
+        chura kar bahar bhej deta hai</strong> — phir wahi code restricted workspace me dobara
+        chalta hai, aur is baar secret bhi nahi milta, raasta bhi band milta hai.
+        Generated code is untrusted — limit what it can reach.
+      </>
+    ),
+    specs: [
+      ["Duration", "75 seconds · 15 shots (DIRECTOR-NOTE ke exact timings)"],
+      ["Format", "9:16 · 1080×1920 · 60 FPS · H.264"],
+      ["Sound", "Silent by design (director note: sound alag pass hai)"],
+      ["File size", "~5.4 MB"],
+    ],
+    download: { href: "/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4", filename: "002-asi05-the-repair-that-ran-9x16-v1.mp4" },
+    note: "Ye v1 REJECT ho chuka hai — final sirf upar wala Premium hai. Direction: productions/002-asi05-the-repair-that-ran/00-DIRECTOR-NOTE.md · neeche live-code player me yehi episode frame-by-frame scrub bhi kar sakte ho.",
+  },
+];
+
 export const App: React.FC = () => {
   const [active, setActive] = useState<Comp>(COMPS[0]);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
   const Cmp = active.component;
   const vertical = active.height > active.width;
 
@@ -111,124 +261,48 @@ export const App: React.FC = () => {
         </p>
       </section>
 
-      <section className="final-video">
-        <div className="final-player">
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            src="/videos/001-chatgpt-google-9x16-v1.mp4"
-          />
+      <section className="walkthroughs" id="walkthroughs">
+        <h2>Walkthroughs — animation ke saath, samajh bhi</h2>
+        <p className="walkthrough-intro">
+          Sirf video dekhna kaafi nahi. Har badi animation ke saath ek written walkthrough hai:
+          shot-by-shot time/frame, kahan rukna hai, kya notice karna hai, aur kaunsi galti kabhi
+          screen par nahi aani chahiye. Pehle normal speed dekho, phir guide ke pause points par
+          ruk kar verify karo.
+        </p>
+        <div className="walkthrough-grid">
+          {WALKTHROUGHS.map((w) => (
+            <article className="walkthrough-card" key={w.id}>
+              <img src={w.cover} alt={`${w.title} — cover art`} loading="lazy" />
+              <span className="final-tag">{w.tag}</span>
+              <h3>{w.title}</h3>
+              <p className="walkthrough-meta">{w.meta}</p>
+              <p>{w.points}</p>
+              <a className="walkthrough-btn" href={w.watch}>
+                {w.watchLabel}
+              </a>
+              <p className="note">
+                Guide repo me: <code>{w.doc}</code>
+              </p>
+            </article>
+          ))}
         </div>
-        <div className="final-info">
-          <span className="final-tag">✅ FINAL RENDERED VIDEO · P001</span>
-          <h2>ChatGPT × Google Connect</h2>
-          <p>
-            Ye upar webpage par hi <strong>asli rendered MP4</strong> chal raha hai — yahi file
-            Shorts/Reels par upload hogi. Play karke yahi preview kar lo (sound on 🔊),
-            pasand aaye to neeche se download kar lo.
-          </p>
-          <dl>
-            <div><dt>Duration</dt><dd>50 seconds</dd></div>
-            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 30 FPS · H.264 + AAC</dd></div>
-            <div><dt>Sound</dt><dd>Music + SFX included (−14.3 LUFS)</dd></div>
-            <div><dt>File size</dt><dd>~22 MB</dd></div>
-          </dl>
-          <a className="download-btn" href="/videos/001-chatgpt-google-9x16-v1.mp4" download="001-chatgpt-google-9x16-v1.mp4">
-            ⬇ Download MP4
-          </a>
-          <p className="note">Neeche wala player live-code preview hai (scenes badalne ke liye); ye wala final file hai.</p>
-        </div>
+        <p className="note">
+          Saari guides ek jagah: <code>docs/17-WALKTHROUGHS-index.md</code> · Aage ka genuine
+          kaam: <code>docs/18-CONTRIBUTION-BACKLOG-50.md</code> (50 real tasks — fake commits nahi).
+        </p>
+        <p className="note">
+          Motion se pareshani hoti hai? Tumhari OS ki reduced-motion setting par neeche wala live
+          player khud nahi chalega — play tum dabaaoge. Aur har kahani bina chalti tasveer ke bhi
+          padhi ja sakti hai: ASI05 aur P001 ke transcripts productions folders me hain (walkthrough
+          index se milege). Har video pehle ek poster ke saath khulta hai, khaali kaala frame nahi.
+        </p>
       </section>
 
-      <section className="final-video">
-        <div className="final-player">
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            src="/videos/asi05-premium.mp4"
-          />
-        </div>
-        <div className="final-info">
-          <span className="final-tag">✅ PREMIUM REBUILD · ASI05 · FULL EPISODE</span>
-          <h2>The Repair That Ran — Premium</h2>
-          <p>
-            Wahi kahani, ab studio-finish ke saath: chhupa hua hukm pehle ek <strong>alag copy</strong> banta hai,
-            agent <strong>khud script likhta aur chalata hai</strong>, secret ki copy bahar jaati hai — phir ek saaf
-            <strong> Replay</strong> me wahi code chalta hai, lekin is baar na secret milta hai, na raasta khula.
-          </p>
-          <dl>
-            <div><dt>Duration</dt><dd>75 seconds · 4500 frames · 15 shots</dd></div>
-            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 yuv420p · silent</dd></div>
-            <div><dt>Status</dt><dd>Premium v1 rendered and frame-checked</dd></div>
-          </dl>
-          <a className="download-btn" href="/videos/asi05-premium.mp4" download="asi05-premium.mp4">
-            ⬇ Download MP4
-          </a>
-          <p className="note">Neeche purane proof/v1 sirf compare ke liye rakhe hain.</p>
-        </div>
-      </section>
+      {FINAL_VIDEOS.map((video) => (
+        <FinalVideoSection key={video.id} video={video} />
+      ))}
 
-      <section className="final-video">
-        <div className="final-player">
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            src="/videos/asi05v2-proof-s03-s05.mp4"
-          />
-        </div>
-        <div className="final-info">
-          <span className="final-tag">🎬 MOTION PROOF · ASI05 v2 (Director's Bible) · Gate 3</span>
-          <h2>The Repair That Ran — v2 motion proof (S03–S05)</h2>
-          <p>
-            Ye pura episode <strong>nahi</strong> hai — sirf sabse mushkil harkat ka saboot hai:
-            bahari report me chhupa hua hukm, uski <strong>alag copy strip</strong> editor tak jaati hai,
-            agent <strong>khud naya script likhta hai</strong>, phir use dock karke <strong>RUN dabata hai</strong>.
-            RUNNING keval dabane ke <em>baad</em> aata hai. Isi quality par pura episode banega.
-          </p>
-          <dl>
-            <div><dt>Duration</dt><dd>17.5 seconds · frames 600–1649 (shots S03, S04, S05)</dd></div>
-            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · silent proof</dd></div>
-            <div><dt>Status</dt><dd>Gate 3 — motion review pending; full render abhi nahi hua</dd></div>
-          </dl>
-          <p className="note">Neeche wala video purana v1 hai (reject ho chuka) — sirf compare ke liye rakha hai.</p>
-        </div>
-      </section>
-
-      <section className="final-video">
-        <div className="final-player">
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            src="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4"
-          />
-        </div>
-        <div className="final-info">
-          <span className="final-tag">✅ FINAL RENDERED VIDEO · ASI05 · RACTOR</span>
-          <h2>The Repair That Ran</h2>
-          <p>
-            Ek error report ke andar chhupa repair, agent se code likhva kar <strong>project secret
-            chura kar bahar bhej deta hai</strong> — phir wahi code restricted workspace me dobara
-            chalta hai, aur is baar secret bhi nahi milta, raasta bhi band milta hai.
-            Generated code is untrusted — limit what it can reach.
-          </p>
-          <dl>
-            <div><dt>Duration</dt><dd>75 seconds · 15 shots (DIRECTOR-NOTE ke exact timings)</dd></div>
-            <div><dt>Format</dt><dd>9:16 · 1080×1920 · 60 FPS · H.264 + AAC</dd></div>
-            <div><dt>Sound</dt><dd>Silent by design (director note: sound alag pass hai)</dd></div>
-            <div><dt>File size</dt><dd>~5.4 MB</dd></div>
-          </dl>
-          <a className="download-btn" href="/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4" download="002-asi05-the-repair-that-ran-9x16-v1.mp4">
-            ⬇ Download MP4
-          </a>
-          <p className="note">Direction: productions/002-asi05-the-repair-that-ran/00-DIRECTOR-NOTE.md · neeche live-code player me yehi episode frame-by-frame scrub bhi kar sakte ho.</p>
-        </div>
-      </section>
-
-      <nav className="switcher">
+      <nav className="switcher" id="live-demos">
         {COMPS.map((c) => (
           <button
             key={c.id}
@@ -254,7 +328,7 @@ export const App: React.FC = () => {
             compositionHeight={active.height}
             controls
             loop
-            autoPlay
+            autoPlay={!reducedMotion}
             clickToPlay
             doubleClickToFullscreen
             style={{ width: "100%", height: "100%" }}

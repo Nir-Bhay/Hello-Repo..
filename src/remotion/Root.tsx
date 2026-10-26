@@ -8,6 +8,7 @@ import { Asi05TheRepairThatRan } from "./compositions/asi05/Asi05";
 import { Asi05V2 } from "./compositions/asi05v2/Asi05V2";
 import { Asi05StyleSample } from "./compositions/asi05v2/Asi05StyleSample";
 import { Asi05Premium } from "./compositions/asi05v3/Asi05Premium";
+import { ASI05_FPS, ASI05_TOTAL_FRAMES } from "./compositions/asi05v3/shots";
 
 /**
  * Saari compositions yahan register hoti hain.
@@ -27,7 +28,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
-      {/* ASI05 — Ractor episode, DIRECTOR-NOTE driven (productions/002-asi05-the-repair-that-ran/) */}
+      {/* ASI05 v1 — REJECTED (user ne reject kiya); sirf compare/legacy ke liye retained */}
       <Composition
         id="Asi05TheRepairThatRan"
         component={Asi05TheRepairThatRan}
@@ -36,7 +37,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
-      {/* ASI05 v2 — Director's Bible v2.0 rebuild (Gate review chal raha hai) */}
+      {/* ASI05 v2 — Bible v2 rebuild; Premium se superseded, Gate-3 proof ke liye retained */}
       <Composition
         id="Asi05V2"
         component={Asi05V2}
@@ -58,8 +59,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Asi05Premium"
         component={Asi05Premium}
-        durationInFrames={4500}
-        fps={60}
+        durationInFrames={ASI05_TOTAL_FRAMES}
+        fps={ASI05_FPS}
         width={1080}
         height={1920}
       />

@@ -22,6 +22,20 @@ Landing page pe teeno demo **asli Remotion compositions live** chalte hain (vide
 Remotion Studio (frame-by-frame editing/preview): `npm run studio`
 Final renders: `npm run render:showcase` · `render:short` · `render:data` → `out/`
 
+## 📖 Walkthroughs — animation ke saath samajh bhi
+
+Har badi animation ke saath ek written walkthrough hai — shot-by-shot time/frame, pause points, kya notice karna hai, aur kaunsi galti kabhi screen par nahi aani chahiye. Index: **[docs/17-WALKTHROUGHS-index.md](docs/17-WALKTHROUGHS-index.md)**
+
+- ASI05 (Premium): [productions/002-asi05-the-repair-that-ran/05-walkthrough.md](productions/002-asi05-the-repair-that-ran/05-walkthrough.md)
+- P001 ChatGPT × Google: [productions/001-chatgpt-google-connect/04-walkthrough.md](productions/001-chatgpt-google-connect/04-walkthrough.md)
+- Demo compositions: [docs/19-DEMO-COMPOSITIONS-WALKTHROUGH.md](docs/19-DEMO-COMPOSITIONS-WALKTHROUGH.md)
+
+Landing page par bhi walkthrough cards hain (cover image + video/live links ke saath).
+
+Repo me aage ka saara genuine kaam ek prioritized list se uthega: **[docs/18-CONTRIBUTION-BACKLOG-50.md](docs/18-CONTRIBUTION-BACKLOG-50.md)** — 50 real tasks, har ek ke acceptance criteria ke saath. Number badhane ke liye fake commits nahi; har commit ek saaf, useful, reviewable change.
+
+Contribution shuru karna hai? Pehle **[CONTRIBUTING.md](CONTRIBUTING.md)** padho. ASI ke shabd samajhne ke liye [docs/20-GLOSSARY-cybersecurity.md](docs/20-GLOSSARY-cybersecurity.md), aur har video ke exact on-screen shabd ke liye [docs/21-ON-SCREEN-COPY-TRANSCRIPTS.md](docs/21-ON-SCREEN-COPY-TRANSCRIPTS.md).
+
 ## 🛠 Kaam kaise hota hai (Story → Video)
 
 ```

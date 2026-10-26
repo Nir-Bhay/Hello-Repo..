@@ -1,0 +1,8 @@
+{
+  "$comment": "Naye code ke liye style (C29). Poore purane repo ko ek saath reformat karna jaan-boojh kar nahi kiya gaya — wo ek alag, reviewable badlav hoga. Lint gate (npm run lint) abhi asal jaanch hai.",
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "printWidth": 110,
+  "tabWidth": 2
+}

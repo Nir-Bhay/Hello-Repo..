@@ -136,7 +136,7 @@ export const Tag: React.FC<{ x: number; y: number; text: string; fill?: string; 
 };
 
 /* ---------- small evidence icons ---------- */
-export const KeyShape: React.FC<{ x: number; y: number; s?: number; fill?: string }> = ({ x, y, s = 1, fill = P.ochre }) => (
+export const KeyShape: React.FC<{ x: number; y: number; s?: number }> = ({ x, y, s = 1 }) => (
   <g transform={`translate(${R(x)} ${R(y)}) scale(${R(s)})`}>
     <g transform="translate(4 6)" fill="none" stroke={P.ink} strokeWidth={11} opacity={0.16} filter="url(#pBlur8)">
       <circle cx={-26} cy={0} r={30} />

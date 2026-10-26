@@ -4,6 +4,7 @@ out/*.mp4
 out/*.png
 out/*.wav
 out/sheets/
+out/qa/
 .DS_Store
 *.log
 # reference clones (study only, repo me commit nahi karte)
