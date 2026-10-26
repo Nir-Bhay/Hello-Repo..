@@ -59,7 +59,7 @@
 | C26 | Walkthrough metadata ko typed data file me le jana | ✅ Done | Cards data se banein; TypeScript type har field ko lock kare |
 | C27 | Composition registry audit | ✅ Done | Root.tsx ki har composition landing/docs se discoverable; dead sample clearly labelled |
 | C28 | ASI05 v1/v2/premium version labelling saaf karna | ✅ Done | Har version ke bagal “rejected / proof / final” status; confusion = 0 |
-| C29 | Lint + format configuration | Planned | Ek command se lint/format check; existing code bina bade diff ke pass |
+| C29 | Lint + format configuration | ✅ Done (lint gate + EditorConfig/Prettier config; poora-repo format ek alag reviewable badlav) | Ek command se lint/format check; existing code bina bade diff ke pass |
 | C30 | Shared constants: durations & shot boundaries | ✅ Done | ASI05 shot boundaries ek jagah se aayein; walkthrough table se match |
 | C31 | Dead-code audit | ✅ Done | Unused imports/files ki list; हटाना sirf proof ke saath |
 | C32 | Landing CSS ko sections me organize karna | ✅ Done | Walkthrough/video/pipeline styles alag blocks me; visual diff = 0 |
@@ -68,12 +68,12 @@
 
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
-| C33 | Render-metadata verification script | Planned | Ek command MP4 ka width/height/fps/frame-count/duration report kare |
-| C34 | Frame-extraction QA script | Planned | Diye gaye frame numbers par stills + contact sheet auto bane |
+| C33 | Render-metadata verification script | ✅ Done | Ek command MP4 ka width/height/fps/frame-count/duration report kare |
+| C34 | Frame-extraction QA script | ✅ Done | Diye gaye frame numbers par stills + contact sheet auto bane |
 | C35 | GitHub Actions: typecheck + build | ⛔ Blocked (workflows permission; ready file docs/25 me) | Har PR par `tsc --noEmit` aur preview build auto chale |
 | C36 | Internal-link CI check | ⛔ Blocked (C35 ke saath hi lagega) | Toota Markdown link PR ko fail kare (C10 ka CI version) |
 | C37 | Public asset size budget | ✅ Done | `public/videos` + images ka size report; budget cross = warning |
-| C38 | Visual-regression still checklist | Planned | Har composition ke hero frames ki checklist; change par before/after |
+| C38 | Visual-regression still checklist | ✅ Done | Har composition ke hero frames ki checklist; change par before/after |
 | C39 | Browser smoke-test checklist | ✅ Done | Landing ke saare players play/pause/scrub karein — manual checklist doc |
 | C40 | Release checklist template | ✅ Done | Final render → verify → copy → landing → PR — ek reusable checklist |
 
@@ -86,11 +86,11 @@
 | C43 | ASI05 Hindi walkthrough script | ✅ Done (script; recording baaki) | Wahi walkthrough Hinglish me; technical shabd English me rakhe |
 | C44 | P001 narrated walkthrough script | ✅ Done (script; recording baaki) | 50s timeline par voice script + caption file |
 | C45 | Demo compositions ki 60s walkthrough script | ✅ Done (script; recording baaki) | Teenon demos ka ek combined narration script |
-| C46 | Agle episodes ke cover/storyboard art direction | Planned | Palette lock ke andar cover system; gibberish text = 0 |
-| C47 | ASI05 sound-design pass (decision ke baad) | Planned | Music/SFX plan pehle doc me; mix −14 LUFS target; silent version bhi safe |
-| C48 | Good-first-issues ki curated list | Planned | Backlog se 10 sabse chhote tasks issue-ready descriptions ke saath |
-| C49 | Quarterly docs review ritual | Planned | Har quarter docs/ links, status aur stale claims ki check — checklist doc |
-| C50 | Portfolio case-study page | Planned | Ek page: problem → process → evidence → final video → seekh |
+| C46 | Agle episodes ke cover/storyboard art direction | ✅ Done | Palette lock ke andar cover system; gibberish text = 0 |
+| C47 | ASI05 sound-design pass (decision ke baad) | ✅ Plan ready (mix faisle ke baad) | Music/SFX plan pehle doc me; mix −14 LUFS target; silent version bhi safe |
+| C48 | Good-first-issues ki curated list | ✅ Done | Backlog se 10 sabse chhote tasks issue-ready descriptions ke saath |
+| C49 | Quarterly docs review ritual | ✅ Done | Har quarter docs/ links, status aur stale claims ki check — checklist doc |
+| C50 | Portfolio case-study page | ✅ Done | Ek page: problem → process → evidence → final video → seekh |
 
 ## Ab tak kya ho chuka hai (is PR me)
 
@@ -129,4 +129,13 @@
 - Chaaro narrated walkthrough **scripts** tayyar hain: ASI05 English (C42) + Hinglish (C43), P001 (C44), demo compositions 60s (C45). Recording ke liye voice ka faisla baaki hai — creator ki awaz best rahegi; synthetic voice sirf alag se tai hone par.
 - **Baaki bacha hai:** C41 (ASI04 brief — agli episode ki story user se confirm hogi, phir pehle document), C46–C50 (art direction, sound pass, good-first-issues, quarterly ritual, case study), aur infra wale C29/C33/C34/C38 + permission-blocked C35/C36.
 
-**Agla kadam:** User ki disha milte hi C41 (ASI04 brief). Tab tak ke liye C48 (good-first-issues ki curated list) sabse chhota aur faydemand kadam hai.
+**Uske baad (infra + nayi disha):**
+- QA tools ban gaye: `verify-video.mjs` (C33 — ASI05: 1080×1920, 60fps, exactly 4500 frames, 75.00s ✓; P001: 1500 frames ✓), `extract-frames.mjs` (C34 — contact sheet aankh se verify; tool ka apna tile-bug bhi pakda aur fix hua), visual-regression checklist `docs/27` (C38), lint gate `npm run lint` + EditorConfig/Prettier config (C29).
+- Art direction (C46: `docs/28`), ASI05 sound-design **plan** (C47: production folder me `09-sound-design-plan.md` — mix faisle ke baad), good-first-issues (C48: `docs/29`), quarterly ritual (C49: `docs/30`), case study (C50: `docs/31`).
+
+**Ab sach me sirf teen cheezein baaki hain — teeno kisi na kisi faisle par atki hain:**
+1. **C41 ASI04 brief** — agli episode ki story/direction user se (phir pehle document, phir video).
+2. **C35/C36 CI** — GitHub token ki `workflows` permission (ready workflow `docs/25` me).
+3. **Recordings + ASI05 sound mix** — voice/music ka faisla (scripts aur cue-sheet ready hain).
+
+**Agla kadam:** upar ki teenon me se jo pehle khule, wahi agla kaam hai. Tab tak repo is haalat me hai ki koi naya contributor `docs/29` se pehla issue utha sakta hai.
