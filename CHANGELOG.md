@@ -3,6 +3,7 @@
 Har release ek entry: **kya badla, kyon, aur saboot kahan hai.** Purani entries kabhi edit nahi hoti; galti nikle to nayi entry me sudhaar likhta hai. (Shuruaat: backlog C78.)
 
 ## Unreleased — Next-50 batches (PR #3, #4 merged; aage ka kaam jaari)
+- **Next-75 Batch D/E/F:** dependabot + sound issue template, repo-health report (docs/42), viewer pack (docs/43), v1-vs-premium (docs/44), series bible (docs/45), timeline poster + GIF, bundle-budget script.
 
 - QA sach me chala: headless Chromium me mobile (360/390/430, koi horizontal scroll nahi) + keyboard focus record (`docs/22`).
 - Videos par **on-screen-text captions** (WebVTT) aur **9:16 poster variants**; frame-cues generator; contrast fix (buttons 5.01:1); release:check ek-command gate.
