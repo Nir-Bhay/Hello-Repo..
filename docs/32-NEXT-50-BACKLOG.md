@@ -15,7 +15,7 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 | C54 | ASI04 script (exact copy) | Blocked | Har shot ke exact on-screen shabd, padhne ke samay ke saath |
 | C55 | ASI04 storyboard | Blocked | Shot-by-shot frame ranges, camera holds, contact frames |
 | C56 | ASI04 timeline.json | Blocked | Har beat seconds me lock; script se match |
-| C57 | Frame-cues CSV generator script | Ready | Ek command se shot boundaries se poori frame table bane |
+| C57 | Frame-cues CSV generator script | ✅ Done | Ek command se shot boundaries se poori frame table bane |
 | C58 | Sabse mushkil harkat ka motion proof | Blocked (C55 ke baad) | Proof render + frame review, poore episode se pehle |
 | C59 | ASI04 cover image | Blocked (C51 ke baad) | Palette lock, koi readable AI-text nahi (docs/28) |
 | C60 | ASI04 gate-review packet | Blocked | Stills + proof + checklist ek jagah, user review ke liye |
@@ -45,9 +45,9 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 | C74 | verify-video ko release ka lazmi step | ✅ Done | Release checklist me command + expected values |
 | C75 | Ek command: `npm run release:check` | ✅ Done | links + lint + build + assets ek saath, fail matlab fail |
 | C76 | Merge ke baad landing deploy check | Ready | Checklist docs/24 ke saath jud jaye |
-| C77 | `out/` purane renders ki safai-policy | Ready | Kya rakhte hain/kya hatate hain, saboot ke saath (finals kabhi bina record ke nahi) |
+| C77 | `out/` purane renders ki safai-policy | ✅ Done | Kya rakhte hain/kya hatate hain, saboot ke saath (finals kabhi bina record ke nahi) |
 | C78 | CHANGELOG shuru karna | ✅ Done | Har release ek entry: kya, kyon, saboot ka link |
-| C79 | Version-tagging ka niyam | Ready | v1/v2/final kab kahenge — ek chhota doc |
+| C79 | Version-tagging ka niyam | ✅ Done | v1/v2/final kab kahenge — ek chhota doc |
 | C80 | Final MP4s ki inventory | ✅ Done | Har final: path, size, duration, status — ek table |
 
 ## Batch 10 — Quality aur gehri accessibility (C81–C90)
@@ -56,7 +56,7 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 |---|---|---|---|
 | C81 | Keyboard checklist asal me chalana | Ready (haath ka kaam) | docs/22 ke har box par pass/fail + browser |
 | C82 | Mobile screenshots saboot (360/390/430) | Ready | Teen widths, koi horizontal scroll nahi — screenshots record |
-| C83 | Rang-contrast audit | Ready | Text/background ke ratios, kamzor jodi ki list |
+| C83 | Rang-contrast audit | ✅ Done (buttons fix; ASI05 ochre finding ASI04 ke liye open) | Text/background ke ratios, kamzor jodi ki list |
 | C84 | Landing par SRT/VTT captions | Blocked (C63 ke baad) | Har final video ke saath caption track |
 | C85 | Poster ke 9:16 + 4:3 crop variants | Ready | Subject kata na ho; dono crops verify |
 | C86 | ASI05 hero-anchor contact sheet + record | ✅ Done | docs/27 ke anchors ki sheet, aankh se dekhi hui |
@@ -69,19 +69,21 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
-| C91 | P001 ki case-study page | Ready | Problem → process → evidence → result → seekh |
-| C92 | README showcase section | Ready | Sabse achha kaam upar dikhe, links ke saath |
+| C91 | P001 ki case-study page | ✅ Done | Problem → process → evidence → result → seekh |
+| C92 | README showcase section | ✅ Done | Sabse achha kaam upar dikhe, links ke saath |
 | C93 | docs/29 ko asal GitHub issues me badalna | Ready (issue kholna owner ka kaam) | 10 issues, har ek acceptance ke saath |
 | C94 | ASI04 launch packet ka khana | Blocked (C51 ke baad) | Cover + teaser + walkthrough ki jagah ready |
 | C95 | Production summary cards | ✅ Done | Har production: duration/format/status/links ek jagah |
 | C96 | ASI series index | ✅ Done | Aaya hua + aane wala, status ke saath (bina invent kiye) |
 | C97 | “Kaise dekhein” viewer guide | ✅ Done | Shorts se aane walon ke liye ek page |
 | C98 | Kisi aur ka pehla PR karwana | ⛔ Dusra contributor | Ek asal PR kisi aur ke naam se merge |
-| C99 | Case studies ko landing se jodna | Ready | Landing se case-study pages ek click par |
+| C99 | Case studies ko landing se jodna | ✅ Done | Landing se case-study pages ek click par |
 | C100 | C51–C100 mid-review | Aakhir me | Kya hua, kya atka, agle 50 ki seedh |
 
 ## Progress (is branch par)
 
 **Ho gaya (bina-faisle wala pehla batch):** C74 (release checklist me verify command lazmi), C75 (`npm run release:check` ek command), C78 (CHANGELOG), C80 (final-assets inventory `docs/33`), C86 (ASI05 ke 14 hero anchors ki contact sheet — `npm run extract:asi05`, aankh se verify: RUNNING sirf f1440 par, K01 jagah par, shutter band, Next: ASI04), C87 (P001 ka decode-verify record notes.md me: 1500 frames exact), C95+C96 (`docs/34`), C97 (`docs/35`).
 
-**Park hai (faisle par):** C51–C60 (ASI04 ki story), C61–C70 (voice/sound), C71–C73 (workflows permission), C84 (captions, recordings ke baad), C90 (phone test), C98 (dusra contributor). Inki wajah se baaki kaam nahi rukega — agla bina-faisle wala batch: C57 (frame-cues generator), C81/C83 (audits), C91/C92/C99 (growth docs).
+**Bina-faisle wala dusra batch bhi ho gaya:** C57 (frame-cues generator — ASI05 ki 4500 rows se bilkul match karke verify), C77 (`out/` policy `docs/36`), C79 (version tagging `docs/37`), C83 (contrast audit `docs/38` — landing buttons ka asal fix #c93e1f, 5.01:1; ASI05 ki ochre “Next:” kamzori ASI04 ke liye open finding, band file ko bina review nahi chhua), C91 (P001 case study `docs/39`), C92 (README showcase), C99 (landing se case-study links).
+
+**Park hai (faisle par):** C51–C60 (ASI04 ki story), C61–C70 (voice/sound), C71–C73 (workflows permission), C84 (captions, recordings ke baad), C90 (phone test), C98 (dusra contributor). Agla bina-faisle wala batch: C81/C82 (haath ki QA — browser chahiye), C85 (poster crops), C88/C89 (quarterly review ka pehla asal run).
