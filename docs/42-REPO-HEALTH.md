@@ -11,13 +11,13 @@ Ek nazar me repo ki sehat. Har number is din **sach me jaanch karke** likha hai;
 | Internal links | Saare OK (`npm run check:links`; templates/ bhi scope me hai — T146: checker pehle se poora repo ghoomta hai, templates skip nahi hota) | release:check |
 | TypeScript / lint / build | Pass | release:check |
 | Assets | 34.76 MB / budget ke andar | `report:assets` |
-| Landing JS | 626.3 KB raw · ~196 KB gzip · budget 700 KB (T147, `npm run report:bundle` jaisa script: `scripts/report-bundle.mjs`) | neeche finding dekho |
+| Landing JS | Initial chunk **235 KB** raw (code-split ke baad; pehle 626 KB ek hi chunk tha) · lazy player chunk 391 KB alag · budget: initial 300 / kul 700 KB | `npm run report:bundle` (scripts/report-bundle.mjs) |
 | Secrets scan (T154) | API-key/private-key patterns ki grep khoj — **koi match nahi mila** | 26 Oct ko chalaya gaya |
 | out/ policy (T153) | `out/` gitignored hai; renders wahi rehte hain, repo me nahi ghus te | docs/36 |
 
 ## Finding 1 — Landing ek hi bada JS chunk hai (T147)
 
-`index-*.js` = 626 KB raw (gzip ~196 KB). Kaam chal raha hai, par code-splitting (walkthrough wala hissa alag chunk) ek asal sudhaar hoga. Budget ab **700 KB** rakha hai — current (626) + thoda headroom; isse upar badhe to pehle ticket kholo, chupchaap mat badhao.
+`index-*.js` kabhi 626 KB raw ka ek hi chunk tha. **Sudhaar ho gaya (issue #12):** Remotion Player + compositions ab `DemoStage` lazy chunk (391 KB) me hain, aur player Lab ke paas aane par hi mount hota hai. Initial chunk **235 KB** hai. Budget: initial 300 KB / kul 700 KB — isse upar badhe to pehle ticket kholo, chupchaap mat badhao.
 
 ## Image audit (T148)
 
