@@ -42,9 +42,21 @@ Koi bhi box fail ho to woh Bug hai — `.github/ISSUE_TEMPLATE/bug_report.md` se
 - Live demo player OS ki reduced-motion setting ka samman karta hai — autoplay band rahega, play tum dabaaoge.
 - Har video **pause** ho sakta hai, aur ASI05/P001 ki puri kahaani bina chalti tasveer ke bhi padhi ja sakti hai: ASI05 transcript [`productions/002-asi05-the-repair-that-ran/06-transcript.md`](../productions/002-asi05-the-repair-that-ran/06-transcript.md) · P001 transcript [`productions/001-chatgpt-google-connect/05-transcript.md`](../productions/001-chatgpt-google-connect/05-transcript.md)
 
+## Execution record — 2026-10-26 (C81, C82)
+
+Headless Chromium (sparticuz build, asli browser engine) se landing ko sach me chalakar dekha gaya. Screenshots: `out/qa/mobile-360.png`, `mobile-390.png`, `mobile-430.png`, `keyboard-focus.png`; raw data `out/qa/browser-qa.json` (out/ gitignored hai — natija yahan likha hai).
+
+| Jaanch | Natija |
+|---|---|
+| 360px | ✅ Horizontal scroll nahi (scrollWidth = 360) · saare 4 videos par poster |
+| 390px | ✅ Horizontal scroll nahi · walkthrough cards ek column, cover saaf crop (screenshot aankh se dekhi) |
+| 430px | ✅ Horizontal scroll nahi |
+| Keyboard Tab | ✅ Player ke buttons (Unmute/Fullscreen), walkthrough links, case-study links, video elements — sab focus hue; focus outline `3px solid` dikhi |
+| Ek imaandaar note | Ek Tab stop BODY par aata hai (page scroll ke liye aam baat); native video controls ke andar ke stops browser ke hisaab se badalte hain — pehle video stop par outline solid dikhi |
+
 ## Honest status
 
-- ✅ Code-level items (upar ki table) implement aur build-verify hain.
-- ⏳ Keyboard-only aur asal-phone ki haath-wali QA **abhi baaki hai** — upar ki checklists usi ke liye hain. Use kiye bina “accessible hai” ka daava nahi hoga.
+- ✅ Code-level items implement hain; keyboard + mobile QA ab **asal browser me execute** ho chuki hai (upar record).
+- ⏳ Asli haath ke phone par normal-speed comprehension test ab bhi **user** ko karna hai (C90) — headless browser uski jagah nahi le sakta, aur ye daava yahan saaf likha hai.
 
 Aur padho: [`docs/17-WALKTHROUGHS-index.md`](17-WALKTHROUGHS-index.md) · [`CONTRIBUTING.md`](../CONTRIBUTING.md)

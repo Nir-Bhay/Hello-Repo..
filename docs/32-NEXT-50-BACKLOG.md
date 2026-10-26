@@ -44,7 +44,7 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 | C73 | PR par asset-size automatic summary | Blocked (C71 ke baad) | Report:assets ka natija PR par dikhe |
 | C74 | verify-video ko release ka lazmi step | ✅ Done | Release checklist me command + expected values |
 | C75 | Ek command: `npm run release:check` | ✅ Done | links + lint + build + assets ek saath, fail matlab fail |
-| C76 | Merge ke baad landing deploy check | Ready | Checklist docs/24 ke saath jud jaye |
+| C76 | Merge ke baad landing deploy check | ✅ Done (checklist docs/24 me; live target abhi configured nahi) | Checklist docs/24 ke saath jud jaye |
 | C77 | `out/` purane renders ki safai-policy | ✅ Done | Kya rakhte hain/kya hatate hain, saboot ke saath (finals kabhi bina record ke nahi) |
 | C78 | CHANGELOG shuru karna | ✅ Done | Har release ek entry: kya, kyon, saboot ka link |
 | C79 | Version-tagging ka niyam | ✅ Done | v1/v2/final kab kahenge — ek chhota doc |
@@ -54,15 +54,15 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 
 | ID | Task | Status | Acceptance |
 |---|---|---|---|
-| C81 | Keyboard checklist asal me chalana | Ready (haath ka kaam) | docs/22 ke har box par pass/fail + browser |
-| C82 | Mobile screenshots saboot (360/390/430) | Ready | Teen widths, koi horizontal scroll nahi — screenshots record |
+| C81 | Keyboard checklist asal me chalana | ✅ Done | docs/22 ke har box par pass/fail + browser |
+| C82 | Mobile screenshots saboot (360/390/430) | ✅ Done | Teen widths, koi horizontal scroll nahi — screenshots record |
 | C83 | Rang-contrast audit | ✅ Done (buttons fix; ASI05 ochre finding ASI04 ke liye open) | Text/background ke ratios, kamzor jodi ki list |
-| C84 | Landing par SRT/VTT captions | Blocked (C63 ke baad) | Har final video ke saath caption track |
-| C85 | Poster ke 9:16 + 4:3 crop variants | Ready | Subject kata na ho; dono crops verify |
+| C84 | Landing par SRT/VTT captions | ✅ Done (on-screen-text VTT; narration SRT recordings ke baad) | Har final video ke saath caption track |
+| C85 | Poster ke 9:16 + 4:3 crop variants | ✅ Done | Subject kata na ho; dono crops verify |
 | C86 | ASI05 hero-anchor contact sheet + record | ✅ Done | docs/27 ke anchors ki sheet, aankh se dekhi hui |
 | C87 | P001 verify-report notes me darj | ✅ Done | Codec/fps/frames/duration notes.md me saboot ke saath |
-| C88 | Quarterly docs review ka pehla run | Ready | docs/30 ki table bhari hui, ek PR me |
-| C89 | “Pending” daavon ki safai | Ready | Jo ho gaya Done; jo nahi, sach likha |
+| C88 | Quarterly docs review ka pehla run | ✅ Done | docs/30 ki table bhari hui, ek PR me |
+| C89 | “Pending” daavon ki safai | ✅ Done | Jo ho gaya Done; jo nahi, sach likha |
 | C90 | ASI05 phone comprehension test record | ⛔ User review | Bina pause dekha; uljhan wala pal time ke saath likha |
 
 ## Batch 11 — Growth & portfolio (C91–C100)
@@ -71,7 +71,7 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 |---|---|---|---|
 | C91 | P001 ki case-study page | ✅ Done | Problem → process → evidence → result → seekh |
 | C92 | README showcase section | ✅ Done | Sabse achha kaam upar dikhe, links ke saath |
-| C93 | docs/29 ko asal GitHub issues me badalna | Ready (issue kholna owner ka kaam) | 10 issues, har ek acceptance ke saath |
+| C93 | docs/29 ko asal GitHub issues me badalna | ✅ Done (5 asal khule issues #5–#9; ho chukon par nakli issue nahi) | 10 issues, har ek acceptance ke saath |
 | C94 | ASI04 launch packet ka khana | Blocked (C51 ke baad) | Cover + teaser + walkthrough ki jagah ready |
 | C95 | Production summary cards | ✅ Done | Har production: duration/format/status/links ek jagah |
 | C96 | ASI series index | ✅ Done | Aaya hua + aane wala, status ke saath (bina invent kiye) |
@@ -86,4 +86,6 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 
 **Bina-faisle wala dusra batch bhi ho gaya:** C57 (frame-cues generator — ASI05 ki 4500 rows se bilkul match karke verify), C77 (`out/` policy `docs/36`), C79 (version tagging `docs/37`), C83 (contrast audit `docs/38` — landing buttons ka asal fix #c93e1f, 5.01:1; ASI05 ki ochre “Next:” kamzori ASI04 ke liye open finding, band file ko bina review nahi chhua), C91 (P001 case study `docs/39`), C92 (README showcase), C99 (landing se case-study links).
 
-**Park hai (faisle par):** C51–C60 (ASI04 ki story), C61–C70 (voice/sound), C71–C73 (workflows permission), C84 (captions, recordings ke baad), C90 (phone test), C98 (dusra contributor). Agla bina-faisle wala batch: C81/C82 (haath ki QA — browser chahiye), C85 (poster crops), C88/C89 (quarterly review ka pehla asal run).
+**Park hai (faisle par):** C51–C60 (ASI04 ki story), C61–C70 (voice/sound), C71–C73 (workflows permission), C84 (captions, recordings ke baad), C90 (phone test), C98 (dusra contributor). **Tisra batch bhi ho gaya (browser QA asal me chali):** C81+C82 — headless Chromium (sparticuz) me landing chali: 360/390/430 teeno par horizontal scroll **nahi**, saare posters maujud, keyboard Tab se player buttons → walkthrough links → videos focus hue (outline 3px solid), record `docs/22` me; C84 — ASI05/P001 par **on-screen-text WebVTT captions** (CC); C85 — **9:16 + 4:3 poster variants** (`public/images/posters/`, video posters ab 9:16 wale); C88 — quarterly review ka pehla asal run (`docs/40`), jisme C89 ka ek jhootha daava (P001 script ko pending kehna) pakda aur theek hua; C76 — merge-ke-baad deploy checklist `docs/24` me; C93 — sach me khule 5 kaamon ke **asal GitHub issues #5–#9** khule, ho chukon par nakli issue nahi khola.
+
+Ab bina-faisle wala kaam lagbhag khatm hai. Jo bacha hai wo sach me faisla maangta hai: ASI04 ki story (C51), voice (C61 se), sound mix, CI ki `workflows` permission (C71), tumhara phone test (C90), dusra contributor (C98) — aur aakhir me C100 review.

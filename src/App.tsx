@@ -94,6 +94,7 @@ type FinalVideoSpec = {
   description: React.ReactNode;
   specs: ReadonlyArray<readonly [string, string]>;
   download?: { href: string; filename: string };
+  captions?: string;
   note: React.ReactNode;
 };
 
@@ -108,7 +109,11 @@ const FinalVideoSection: React.FC<{ video: FinalVideoSpec }> = ({ video }) => (
         poster={video.poster}
         aria-label={video.ariaLabel}
         src={video.src}
-      />
+      >
+        {video.captions ? (
+          <track kind="captions" src={video.captions} srcLang="en" label="On-screen text" default />
+        ) : null}
+      </video>
     </div>
     <div className="final-info">
       <span className="final-tag">{video.tag}</span>
@@ -136,7 +141,8 @@ const FINAL_VIDEOS: FinalVideoSpec[] = [
   {
     id: "p001-final",
     src: "/videos/001-chatgpt-google-9x16-v1.mp4",
-    poster: "/images/walkthroughs/p001-chatgpt-google-cover.jpg",
+    poster: "/images/posters/p001-9x16.jpg",
+    captions: "/captions/p001.vtt",
     ariaLabel: "P001 final rendered video: ChatGPT Google Connect se judta hai",
     tag: "✅ FINAL RENDERED VIDEO · P001",
     title: "ChatGPT × Google Connect",
@@ -159,7 +165,8 @@ const FINAL_VIDEOS: FinalVideoSpec[] = [
   {
     id: "asi05-premium",
     src: "/videos/asi05-premium.mp4",
-    poster: "/images/walkthroughs/asi05-premium-cover.jpg",
+    poster: "/images/posters/asi05-9x16.jpg",
+    captions: "/captions/asi05-premium.vtt",
     ariaLabel: "ASI05 premium episode: The Repair That Ran, silent 75 second video",
     tag: "✅ PREMIUM REBUILD · ASI05 · FULL EPISODE",
     title: "The Repair That Ran — Premium",
@@ -181,7 +188,7 @@ const FINAL_VIDEOS: FinalVideoSpec[] = [
   {
     id: "asi05-v2-proof",
     src: "/videos/asi05v2-proof-s03-s05.mp4",
-    poster: "/images/walkthroughs/asi05-premium-cover.jpg",
+    poster: "/images/posters/asi05-9x16.jpg",
     ariaLabel: "ASI05 v2 motion proof, sirf shots S03 se S05",
     tag: "🎬 MOTION PROOF · ASI05 v2 (Director's Bible) · Gate 3",
     title: "The Repair That Ran — v2 motion proof (S03–S05)",
@@ -203,7 +210,7 @@ const FINAL_VIDEOS: FinalVideoSpec[] = [
   {
     id: "asi05-v1-rejected",
     src: "/videos/002-asi05-the-repair-that-ran-9x16-v1.mp4",
-    poster: "/images/walkthroughs/asi05-premium-cover.jpg",
+    poster: "/images/posters/asi05-9x16.jpg",
     ariaLabel: "ASI05 purana v1 video, reject ho chuka, sirf compare ke liye",
     tag: "🗂 ASI05 v1 · REJECTED · SIRF COMPARE KE LIYE",
     title: "The Repair That Ran — v1 (rejected)",

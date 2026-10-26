@@ -4,6 +4,23 @@ Ye list unke liye hai jo is repo me **pehli baar** kuchh karna chahte hain. Har 
 
 > Shuru karne se pehle: [`CONTRIBUTING.md`](../CONTRIBUTING.md) · Har issue ke saath uska acceptance likha hai — wahi “ho gaya” ka matlab hai.
 
+## Status (2026-10-26 · C93)
+
+Ho chuke kaam par nakli issue **nahi** khola gaya. Jo sach me khula tha, usi ka asal GitHub issue bana hai:
+
+| Task | Haal |
+|---|---|
+| G1 footer link | Issue [#5](https://github.com/Nir-Bhay/motion-studio/issues/5) |
+| G2 keyboard checklist | ✅ Ho gaya (C81 — headless browser record `docs/22` me) |
+| G3 mobile screenshots | ✅ Ho gaya (C82 — 360/390/430, record `docs/22` me) |
+| G4 poori anchor sheet | Issue [#6](https://github.com/Nir-Bhay/motion-studio/issues/6) (14 hero anchors C86 me ho gaye; baaki isme) |
+| G5 P001 verify record | ✅ Ho gaya (C87 — production notes me) |
+| G6 Prettier pilot | Issue [#7](https://github.com/Nir-Bhay/motion-studio/issues/7) |
+| G7 15-minute quickstart | Issue [#8](https://github.com/Nir-Bhay/motion-studio/issues/8) |
+| G8 walkthrough template | ✅ Ho gaya (`templates/07-walkthrough.md`) |
+| G9 Root comments shaili | Issue [#9](https://github.com/Nir-Bhay/motion-studio/issues/9) |
+| G10 verify saboot walkthrough me | ✅ Pehle se maujud (05-walkthrough ki honest-status) |
+
 | # | Kaam | Size | Files | Acceptance |
 |---|---|---|---|---|
 | G1 | Landing ke footer me walkthrough index ka link jodo | XS | `src/App.tsx` | Footer se `docs/17` tak ek click; build saaf |

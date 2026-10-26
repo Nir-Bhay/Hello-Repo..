@@ -2,6 +2,12 @@
 
 Har release ek entry: **kya badla, kyon, aur saboot kahan hai.** Purani entries kabhi edit nahi hoti; galti nikle to nayi entry me sudhaar likhta hai. (Shuruaat: backlog C78.)
 
+## Unreleased — Next-50 batches (PR #3, #4 merged; aage ka kaam jaari)
+
+- QA sach me chala: headless Chromium me mobile (360/390/430, koi horizontal scroll nahi) + keyboard focus record (`docs/22`).
+- Videos par **on-screen-text captions** (WebVTT) aur **9:16 poster variants**; frame-cues generator; contrast fix (buttons 5.01:1); release:check ek-command gate.
+- Detail: `docs/32-NEXT-50-BACKLOG.md` ki progress lines.
+
 ## 2026-10-26 — Walkthroughs + contribution system (PR #2, merged)
 
 - Har badi animation ke saath **written walkthrough**: ASI05 (shot-by-shot, exact frame anchors), P001, demo compositions. Index: `docs/17-WALKTHROUGHS-index.md`.
