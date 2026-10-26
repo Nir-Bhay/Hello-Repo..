@@ -108,3 +108,17 @@
 | T175 | T101–T175 mid-review (C100 की तरह) | List jeeti रहे, kagaz न बने | Kya hua/kya atka/agle 75 ki seedh |
 
 **Pehla kadam (is branch par):** Batch A — खुले issues #5, #9, #8, #7, #6 implement karke band karna, kyunki wo असली, खुले, aur bina किसी फैसले के हो सकते हैं.
+
+## Progress — Batch A (is PR me)
+
+- ✅ **T101** footer से walkthrough index + final-assets inventory के links (Issue #5 ka kaam).
+- ✅ **T102** Root.tsx comments ek Hinglish शैली में — सिर्फ़ comments, कोई id/duration नहीं बदला (Issue #9).
+- ✅ **T103** CONTRIBUTING में “15 minute me pehla PR” quickstart (Issue #8).
+- ✅ **T104 + T107** Prettier pilot: `src/data/walkthroughs.ts` पर Prettier चलाया — **zero diff** (हाथ की शैली config से पहले से match थी). फैसला: config नये code के लिए रहेगी; `$comment` key हटाई ताकि warning न आये. पूरा-repo format अब भी अलग, reviewable काम रहेगा (Issue #7).
+- ✅ **T105** Review anchors 14 → **19** (`npm run extract:asi05`); sheet आँख से देखी — RUNNING सिर्फ़ press के बाद, K01 जगह पर, shutter band, Next: ASI04. कोई forbidden state नहीं (Issue #6).
+- ✅ **T106** Skip-link (“Seedha walkthroughs par jao”) — Tab की पहली stop, focus पर दिखता है.
+- ✅ **T108** Footer में docs/33 inventory का link ग़लत-file चेतावनी के साथ.
+- ✅ **T109** docs/17 में transcript/narration-script की सीधी कड़ियाँ.
+- ⏳ T110 (CHANGELOG आदत) — CONTRIBUTING में नियम अगली बार; इस PR की entry CHANGELOG में है ही.
+
+Issues #5–#9 का काम इस PR में है; merge होते ही `Closes` से वे अपने आप बंद होंगे.
