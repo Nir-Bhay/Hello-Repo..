@@ -18,6 +18,10 @@
 - **P001:** [walkthrough](../productions/001-chatgpt-google-connect/04-walkthrough.md) · [transcript](../productions/001-chatgpt-google-connect/05-transcript.md) · [narration script](../productions/001-chatgpt-google-connect/06-walkthrough-script.md)
 - **Demos:** [walkthrough](19-DEMO-COMPOSITIONS-WALKTHROUGH.md) · [narration script](26-DEMO-WALKTHROUGH-SCRIPT.md)
 
+## Print karke saath rakho
+
+- **ASI05 Viewer Pack** — [`docs/43-ASI05-VIEWER-PACK.md`](43-ASI05-VIEWER-PACK.md): ek-page kahani ka saar, khud ko parkhne ke 5 sawaal, badon ke liye saath-dekhne ki guide, aksar-poochhe-sawaal aur Devanagari saar. Video dekhte hue ya uske baad — print karke haath me rakhne ke liye.
+
 ## Walkthrough kaise use karein (3-round method)
 
 1. **Round 1 — Normal speed, bina pause.** Sirf kahani samjho. Agar beech me “ye kyon hua?” wala sawal aaye, wahi walkthrough ka kaam hai.
