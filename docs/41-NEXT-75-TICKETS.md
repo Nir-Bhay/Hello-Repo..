@@ -152,3 +152,11 @@ Issues #5–#9 का काम इस PR में है; merge होते �
 - 📝 **T111 ke liye taiyaari:** ASI04 ke 3 topic options + sifaarish `docs/47` — faisla ek shabd (A/B/C) ka hai.
 - 📝 **T126 ke liye taiyaari:** Voice brief `docs/48` — faisla ek shabd (`voice: own` / `voice: tts`) ka hai.
 - Ab bhi bina-faisle ke khule: T141–T143 (CI — `workflows` permission), T168 (dusra contributor), T149 (agli quarter ki review), C90 (phone test). Ye kagaz par “done” kabhi nahi likhe jayenge.
+
+## Progress — "Sab abhi" round (PR #20 me joda gaya)
+
+- ✅ **Batch B ka kagaz-pack (draft):** ASI04 Option A (docs/47 ki sifaarish) par pura pre-production pack `productions/003-asi04-the-helpful-summary/` — Director's Note (OWASP LLM01 Scenario #2/#4 par tikaya), brief, exact-copy script, storyboard (14 shots), timeline.json, generator se bani **4500-row frame-cues.csv**, forbidden states, walkthrough/transcript skeletons. Saaf likha hai: **approval baki, render nahi hua.**
+- ✅ **T155 backup drill** asal me chala (finals ke size `docs/33` se mille) — mid-review `docs/49` me; ek Kami bhi wahi likhi: off-site copy abhi baki.
+- ✅ **T173** community welcome (`docs/51`) aur **T126 ki taiyaari** recording guide (`docs/50`: jagah, doori, takes, take-sheet).
+- ✅ **T175 mid-review** (`docs/49`): 46 Done · 14 draft/taiyaar · 15 blocked (har wajah ke saath).
+- Ab sach me sirf teen ghadiyaan bachi hain: ASI04 (A/B/C), voice (own/tts), CI permission. Inke bina aage ka "done" likhna jhooth hoga — isiliye nahi likha.

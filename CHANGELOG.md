@@ -3,6 +3,7 @@
 Har release ek entry: **kya badla, kyon, aur saboot kahan hai.** Purani entries kabhi edit nahi hoti; galti nikle to nayi entry me sudhaar likhta hai. (Shuruaat: backlog C78.)
 
 ## Unreleased — Next-50 batches (PR #3, #4 merged; aage ka kaam jaari)
+- **ASI04 draft pack + mid-review:** ASI04 (Option A sifarish) ka pura pre-production kagaz `productions/003-asi04-the-helpful-summary/` (4500-row frame-cues ke saath, approval baki), voice recording guide, community welcome, aur Next-75 mid-review (46 done / 14 taiyaar / 15 blocked — docs/49).
 - **Round 2 (issues #12–#16):** landing code-split (initial JS 626→235 KB) + player viewport-gate (skip-link focus fix), browser QA re-run aur contrast addendum, P001 quarterly re-verify (video ab bhi sahi), glossary K01/K02/token, ASI04 topic proposal + voice brief.
 - **Next-75 Batch D/E/F:** dependabot + sound issue template, repo-health report (docs/42), viewer pack (docs/43), v1-vs-premium (docs/44), series bible (docs/45), timeline poster + GIF, bundle-budget script.
 
