@@ -3,6 +3,7 @@
 Har release ek entry: **kya badla, kyon, aur saboot kahan hai.** Purani entries kabhi edit nahi hoti; galti nikle to nayi entry me sudhaar likhta hai. (Shuruaat: backlog C78.)
 
 ## Unreleased — Next-50 batches (PR #3, #4 merged; aage ka kaam jaari)
+- **Round 2 (issues #12–#16):** landing code-split (initial JS 626→235 KB) + player viewport-gate (skip-link focus fix), browser QA re-run aur contrast addendum, P001 quarterly re-verify (video ab bhi sahi), glossary K01/K02/token, ASI04 topic proposal + voice brief.
 - **Next-75 Batch D/E/F:** dependabot + sound issue template, repo-health report (docs/42), viewer pack (docs/43), v1-vs-premium (docs/44), series bible (docs/45), timeline poster + GIF, bundle-budget script.
 
 - QA sach me chala: headless Chromium me mobile (360/390/430, koi horizontal scroll nahi) + keyboard focus record (`docs/22`).

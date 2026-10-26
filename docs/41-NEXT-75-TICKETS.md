@@ -140,3 +140,15 @@ Issues #5–#9 का काम इस PR में है; merge होते �
 - ✅ **T171** Landing footer me “Kaise dekhein” + Viewer Pack links.
 - 🔸 T150/T151 (contrast/a11y re-run) — skip-link ke baad ka browser re-run agle round ke liye sach me khula hai; kagazi “done” nahi likha.
 - 🔸 Batch B (ASI04) aur Batch C (awaaz) — faislon par park, jaisa tha.
+
+## Progress — Round 2 (khule issues #12–#16 par kaam)
+
+- ✅ **Issue #12 / T147 sudhaar:** Landing JS code-split — Remotion Player + compositions `DemoStage` lazy chunk me (391 KB), initial chunk **626.6 → 235.2 KB**. Player ab Lab ke paas aane par mount hota hai (viewport gate). `report:bundle` ab initial/lazy alag napta hai (budget 300/700).
+- ✅ **Issue #13 / T151 re-run:** Headless Chromium me checklist dobara chali (docs/22 me record). Ek asal bug pakda aur fix hua: player pehle mount par focus kheench raha tha, skip-link Tab se chook jaata tha — gate ke baad pehli Tab stop skip-link, Enter → `#walkthroughs`. Mobile 390: horizontal scroll nahi. Phone wala C90 ab bhi sach me baki.
+- ✅ **T150 contrast re-audit:** Skip-link safed-on-`#C93E1F` = **5.01:1** (AA pass) — gehara karne ki zaroorat nahi (docs/38 addendum).
+- ✅ **Issue #14 / T165:** P001 quarterly re-verify `docs/46` — official OpenAI pages (Oct 2026) se tulna: video ab bhi sahi, v2 abhi zaroori nahi; “Install plugin” kadam aur unified Drive note bhavishya ke liye.
+- ✅ **Issue #15:** Glossary me K01/K02/token ki baccho-jaisi saadaaran entries (docs/20).
+- ✅ **Issue #16:** docs/17 me Viewer Pack ki kadhi “Print karke saath rakho” ke saath.
+- 📝 **T111 ke liye taiyaari:** ASI04 ke 3 topic options + sifaarish `docs/47` — faisla ek shabd (A/B/C) ka hai.
+- 📝 **T126 ke liye taiyaari:** Voice brief `docs/48` — faisla ek shabd (`voice: own` / `voice: tts`) ka hai.
+- Ab bhi bina-faisle ke khule: T141–T143 (CI — `workflows` permission), T168 (dusra contributor), T149 (agli quarter ki review), C90 (phone test). Ye kagaz par “done” kabhi nahi likhe jayenge.
