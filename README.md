@@ -4,6 +4,16 @@
 
 > *Motion is the message.* — is repo ka pehla demo khud ye kehta hai (neeche dekho).
 
+## ⭐ Showcase — sabse achha kaam pehle
+
+| Kaam | Kya hai | Kahan milega |
+|---|---|---|
+| **ASI05 — The Repair That Ran (Premium)** | Cybersecurity episode: chhupa hukm → agent ka khud code chalana → secret ki copy bahar → restricted replay | Final: `productions/002-asi05-the-repair-that-ran/002-asi05-premium-9x16-v1.mp4` · [Case study](docs/31-CASE-STUDY-ASI05.md) · Walkthrough usi folder me `05-walkthrough.md` |
+| **P001 — ChatGPT × Google Connect** | Pehla asal production: bina voiceover, text hi awaz | Final: `productions/001-chatgpt-google-connect/001-chatgpt-google-9x16-v1.mp4` · [Case study](docs/39-CASE-STUDY-P001.md) |
+| **Walkthrough system** | Har animation ke saath shot-by-shot guide, transcript, narration scripts | [docs/17-WALKTHROUGHS-index.md](docs/17-WALKTHROUGHS-index.md) · Landing par covers ke saath |
+
+Kaunsa file final hai aur kaunsi rejected/proof — ek nazar ke liye: [docs/33-FINAL-ASSETS-INVENTORY.md](docs/33-FINAL-ASSETS-INVENTORY.md)
+
 ## ▶️ Live preview dekho
 
 ```bash

@@ -296,6 +296,12 @@ export const App: React.FC = () => {
           padhi ja sakti hai: ASI05 aur P001 ke transcripts productions folders me hain (walkthrough
           index se milege). Har video pehle ek poster ke saath khulta hai, khaali kaala frame nahi.
         </p>
+        <p className="note">
+          Ye videos *kaise* bane, uski poori kahaani case studies me hai:{" "}
+          <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/31-CASE-STUDY-ASI05.md" target="_blank" rel="noreferrer">ASI05 case study</a>
+          {" · "}
+          <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/39-CASE-STUDY-P001.md" target="_blank" rel="noreferrer">P001 case study</a>
+        </p>
       </section>
 
       {FINAL_VIDEOS.map((video) => (
