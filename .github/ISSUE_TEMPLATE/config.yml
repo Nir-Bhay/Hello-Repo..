@@ -6,3 +6,7 @@ contact_links:
   - name: Contribution backlog (50 tasks)
     url: https://github.com/Nir-Bhay/motion-studio/blob/main/docs/18-CONTRIBUTION-BACKLOG-50.md
     about: Naya kaam shuru karne se pehle yahan se task chuno
+
+  - name: Sound/awaaz ka kaam
+    value: sound-voice
+    about: Narration, SRT, SFX ya mix ke liye.

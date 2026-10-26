@@ -40,6 +40,8 @@ Agar inme se koi step fresh clone par tute, to wahi ek genuine bug hai — issue
 - Bade kaam ko **logical commits** me todo — lekin har commit apne aap me complete aur reviewable ho. Aadha toota hua beech-wala commit nahi.
 - Khaali/naam-ke commits (sirf date, sirf space, sirf number) **kabhi nahi**. Contribution graph se zyada zaruri hai ki history padhne par kahani samajh aaye.
 
+- **Har PR me CHANGELOG ki ek entry** (T110): kya badla, ek line, `Unreleased` ke neeche. History hi portfolio hai — bina entry wala PR adha maana jayega.
+
 ## Pull request rules
 
 PR kholte hi [`.github/pull_request_template.md`](.github/pull_request_template.md) ka template aayega. Usme ye hona hi chahiye:
