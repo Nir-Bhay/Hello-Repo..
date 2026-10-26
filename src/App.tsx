@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Player } from "@remotion/player";
-import { ShowcaseKinetic } from "./remotion/compositions/ShowcaseKinetic";
-import { ShortHook } from "./remotion/compositions/ShortHook";
-import { DataStory } from "./remotion/compositions/DataStory";
-import { Asi05TheRepairThatRan } from "./remotion/compositions/asi05/Asi05";
+import React, { Suspense, lazy, useEffect, useState } from "react";
+// Player + compositions LAZY hain (issue #12): pehla paint unke bina hota hai.
+const DemoStage = lazy(() => import("./components/DemoStage"));
 import { WALKTHROUGHS } from "./data/walkthroughs";
 
 type Comp = {
@@ -15,7 +12,6 @@ type Comp = {
   height: number;
   fps: number;
   seconds: number;
-  component: React.ComponentType;
   renderCmd: string;
   scenes: string;
 };
@@ -30,7 +26,6 @@ const COMPS: Comp[] = [
     height: 1920,
     fps: 60,
     seconds: 75,
-    component: Asi05TheRepairThatRan,
     renderCmd: "npx remotion render src/remotion/index.ts Asi05TheRepairThatRan",
     scenes: "S01 task → S02 outside report → S03 red repair → S04 agent writes code → S05 it runs → S06 secret read (K01 stays, K02 born) → S07 secret escapes → S08 title → S09 replay → S10 restricted workspace → S11 still runs → S12 access denied → S13 connection blocked → S14 lesson → S15 RACTOR close",
   },
@@ -43,7 +38,6 @@ const COMPS: Comp[] = [
     height: 1080,
     fps: 60,
     seconds: 12,
-    component: ShowcaseKinetic,
     renderCmd: "npm run render:showcase",
     scenes: "0–3.6s headline reveal → 3.6–7.2s 3 rules → 7.2–10s 60fps count-up → 10–12s final hold",
   },
@@ -56,7 +50,6 @@ const COMPS: Comp[] = [
     height: 1920,
     fps: 30,
     seconds: 15,
-    component: ShortHook,
     renderCmd: "npm run render:short",
     scenes: "0–3s HOOK → 3–7s problem → 7–12s fix → 12–15s payoff + loop CTA · word-by-word captions",
   },
@@ -69,7 +62,6 @@ const COMPS: Comp[] = [
     height: 1080,
     fps: 30,
     seconds: 10,
-    component: DataStory,
     renderCmd: "npm run render:data",
     scenes: "title → bars spring-grow + SVG line draw-on → 128K count-up → final hold",
   },
@@ -236,6 +228,18 @@ const FINAL_VIDEOS: FinalVideoSpec[] = [
 export const App: React.FC = () => {
   const [active, setActive] = useState<Comp>(COMPS[0]);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [showPlayer, setShowPlayer] = useState(false);
+  const playerGateRef = React.useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = playerGateRef.current;
+    if (!el || showPlayer) return;
+    const io = new IntersectionObserver(
+      (entries) => { if (entries.some((e) => e.isIntersecting)) setShowPlayer(true); },
+      { rootMargin: "400px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [showPlayer]);
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const update = () => setReducedMotion(mq.matches);
@@ -243,7 +247,6 @@ export const App: React.FC = () => {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
-  const Cmp = active.component;
   const vertical = active.height > active.width;
 
   return (
@@ -335,20 +338,16 @@ export const App: React.FC = () => {
       </nav>
 
       <section className={vertical ? "stage vertical" : "stage"}>
-        <div className="player-wrap">
-          <Player
-            component={Cmp}
-            durationInFrames={active.seconds * active.fps}
-            fps={active.fps}
-            compositionWidth={active.width}
-            compositionHeight={active.height}
-            controls
-            loop
-            autoPlay={!reducedMotion}
-            clickToPlay
-            doubleClickToFullscreen
-            style={{ width: "100%", height: "100%" }}
-          />
+        <div className="player-wrap" ref={playerGateRef}>
+          {showPlayer ? (
+            <Suspense fallback={<p className="player-loading">Player load ho raha hai…</p>}>
+              <DemoStage demo={active} autoPlay={!reducedMotion} />
+            </Suspense>
+          ) : (
+            <button type="button" className="player-load-btn" onClick={() => setShowPlayer(true)}>
+              ▶ Live player load karo — {active.title}
+            </button>
+          )}
         </div>
         <aside className="specs">
           <h2>{active.title}</h2>
