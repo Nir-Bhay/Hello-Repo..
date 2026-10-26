@@ -122,3 +122,21 @@
 - ⏳ T110 (CHANGELOG आदत) — CONTRIBUTING में नियम अगली बार; इस PR की entry CHANGELOG में है ही.
 
 Issues #5–#9 का काम इस PR में है; merge होते ही `Closes` से वे अपने आप बंद होंगे.
+
+## Progress — Batch D/E/F (PR #11 me joda gaya)
+
+- ✅ **T110** CONTRIBUTING me “har PR me CHANGELOG entry” niyam.
+- ✅ **T144** `.github/dependabot.yml` (npm, haftawar, `deps` prefix).
+- ✅ **T145** Issue template: Sound/Voice + config.yml me entry.
+- ✅ **T146** Link-checker ka scope verify: templates/ pehle se cover hai (checker poora repo ghoomta hai; docs/42 me record).
+- ✅ **T147** `report-bundle` script — finding: landing JS 626 KB raw / ~196 KB gzip ek hi chunk; budget 700 KB dastak; code-splitting alag ticket (issue round-2).
+- ✅ **T148** Image audit: saari images < 250 KB (docs/42 table).
+- ✅ **T152/T153/T154** Repo health one-pager `docs/42`: secrets grep khoj saaf, out/ policy record, khule jokhim imandaari se likhe.
+- ✅ **T156–T159 + T161** Viewer pack `docs/43`: ek-page kahani, 5-sawaal quiz, badon ke liye guide, FAQ, Devanagari saar.
+- ✅ **T160** v1 (rejected) banam Premium tulna `docs/44`.
+- ✅ **T164** Series bible `docs/45` (palette/camera/copy/forbidden/awaaz ke sthaayi niyam).
+- ✅ **T163** Timeline poster `public/images/posters/asi05-timeline.jpg` (6 frames, aankh se verify).
+- ✅ **T166** GIF companion: Run-press pal ka 3s GIF (240 KB) `productions/002…/assets/asi05-run-press.gif`.
+- ✅ **T171** Landing footer me “Kaise dekhein” + Viewer Pack links.
+- 🔸 T150/T151 (contrast/a11y re-run) — skip-link ke baad ka browser re-run agle round ke liye sach me khula hai; kagazi “done” nahi likha.
+- 🔸 Batch B (ASI04) aur Batch C (awaaz) — faislon par park, jaisa tha.
