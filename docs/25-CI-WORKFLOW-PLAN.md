@@ -46,3 +46,5 @@ jobs:
 ```
 
 Judne ke baad backlog me C35/C36 ko Done mark karna hai aur pehle PR par green check ka screenshot/evidence PR description me jodna hai.
+
+**Dobara koshish — 26 Oct 2026 (PR #20 ke saath):** workflow commit phir push kiya gaya; GitHub ne phir wahi jawab diya — `refusing to allow a GitHub App to create or update workflow ... without workflows permission`. Local commit wapas le liya gaya; branch aur PR #20 par koi asar nahi. Unblock ka raasta waisa hi hai: Arena/GitHub connection ko `workflows` permission ke saath reconnect, ya owner web UI se file bana de. Tab tak CI **sach me blocked** likha rahega.
