@@ -395,6 +395,10 @@ export const App: React.FC = () => {
           📖 <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/17-WALKTHROUGHS-index.md" target="_blank" rel="noreferrer">Saari walkthroughs ek jagah (index)</a>
           {" · "}
           🗂 <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/33-FINAL-ASSETS-INVENTORY.md" target="_blank" rel="noreferrer">Kaunsi file final hai — inventory</a>
+          {" · "}
+          👀 <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/35-HOW-TO-WATCH.md" target="_blank" rel="noreferrer">Kaise dekhein</a>
+          {" · "}
+          🧒 <a href="https://github.com/Nir-Bhay/motion-studio/blob/main/docs/43-ASI05-VIEWER-PACK.md" target="_blank" rel="noreferrer">ASI05 Viewer Pack (printable + quiz)</a>
           <span> · Galat file upload karna sabse mehengi galti hai; pehle inventory dekho.</span>
         </p>
       </footer>
