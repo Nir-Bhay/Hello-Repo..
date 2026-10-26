@@ -12,6 +12,12 @@
 | 2 | **P001 — ChatGPT × Google Connect** | General viewer, product learner | ![P001 cover](../public/images/walkthroughs/p001-chatgpt-google-cover.jpg) | `/videos/001-chatgpt-google-9x16-v1.mp4` | [`productions/001-chatgpt-google-connect/04-walkthrough.md`](../productions/001-chatgpt-google-connect/04-walkthrough.md) |
 | 3 | **Demo Compositions — Showcase / ShortHook / DataStory** | Motion-design learner, contributor | ![Studio cover](../public/images/walkthroughs/motion-studio-walkthrough-cover.jpg) | Landing page ka live Remotion player | [`docs/19-DEMO-COMPOSITIONS-WALKTHROUGH.md`](19-DEMO-COMPOSITIONS-WALKTHROUGH.md) |
 
+## Seedhi kadiyan (guide ke saath ki cheezein)
+
+- **ASI05:** [walkthrough](../productions/002-asi05-the-repair-that-ran/05-walkthrough.md) · [transcript](../productions/002-asi05-the-repair-that-ran/06-transcript.md) · [narration script — English](../productions/002-asi05-the-repair-that-ran/07-walkthrough-script.md) · [Hinglish](../productions/002-asi05-the-repair-that-ran/08-walkthrough-script-hindi.md) · [sound plan](../productions/002-asi05-the-repair-that-ran/09-sound-design-plan.md)
+- **P001:** [walkthrough](../productions/001-chatgpt-google-connect/04-walkthrough.md) · [transcript](../productions/001-chatgpt-google-connect/05-transcript.md) · [narration script](../productions/001-chatgpt-google-connect/06-walkthrough-script.md)
+- **Demos:** [walkthrough](19-DEMO-COMPOSITIONS-WALKTHROUGH.md) · [narration script](26-DEMO-WALKTHROUGH-SCRIPT.md)
+
 ## Walkthrough kaise use karein (3-round method)
 
 1. **Round 1 — Normal speed, bina pause.** Sirf kahani samjho. Agar beech me “ye kyon hua?” wala sawal aaye, wahi walkthrough ka kaam hai.

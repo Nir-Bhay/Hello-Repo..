@@ -4,6 +4,17 @@
 
 > Pehle ye teen files padho: [`docs/17-WALKTHROUGHS-index.md`](docs/17-WALKTHROUGHS-index.md) (kya bana hai) · [`docs/18-CONTRIBUTION-BACKLOG-50.md`](docs/18-CONTRIBUTION-BACKLOG-50.md) (kya kaam baaki hai) · [`AGENTS.md`](AGENTS.md) (agent/operating rules)
 
+## 15 minute me pehla PR (quickstart)
+
+1. **Repo lo aur jaancho (5 min):** `npm ci` → `npm run check:links` → `npx tsc --noEmit` → `npm run preview` (landing khulni chahiye).
+2. **Ek chhota kaam chuno (2 min):** `docs/29-GOOD-FIRST-ISSUES.md` ya GitHub par `good first issue` label wala issue. Bada kaam pehle din mat pakdo.
+3. **Branch banao:** `git checkout -b docs/<chhota-naam>` (main se).
+4. **Ek hi badlav karo (5 min):** ek file, ek maksad. Animation/copy chhua hai to frame saboot rakho (CONTRIBUTING ke niyam neeche).
+5. **Phir jaancho:** `npm run lint` aur `npm run build:preview` — dono saaf.
+6. **PR kholo:** template khud aayega; Summary me task/issue number, Verification me upar wali commands ka natija sach likho.
+
+Bas — pehla PR tayyaar. Review me jo mile, use seekh samjho, sharm nahi.
+
 ## Kaam shuru karne se pehle
 
 1. **Backlog se ek task chuno** (`docs/18-CONTRIBUTION-BACKLOG-50.md`). Ek task = ek logical change. Task ID apne issue/PR me likho (jaise `C11`).
