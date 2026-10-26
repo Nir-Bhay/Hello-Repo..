@@ -37,4 +37,16 @@ npx vite preview --host 0.0.0.0 --port 5173   # ya npm run preview (dev)
 
 PR description ke “Verification” hisse me: browser ka naam, kaunsi checklist pass/fail, aur fail ho to frame/time ke saath Bug issue. Bina chalaye “sab theek hai” kabhi mat likho.
 
+## Merge ke baad: deploy/live check (C76)
+
+PR merge hone ke baad, jab bhi landing kahin live ho (preview ya deploy):
+
+1. Live URL kholo — purana cached version na ho (hard refresh).
+2. Upar wali checklist ka chhota version: ASI05 + P001 video play, ek walkthrough card ka link, ek live-player switch.
+3. Posters aur captions (CC button) dono videos par dikhe — ASI05 silent hai, uske captions on-screen text hain.
+4. 390px mobile width par ek screenshot — horizontal scroll ho to merge ko "live-verified" mat kaho.
+5. Natija CHANGELOG / PR comment me ek line: "live check pass — <date> — <browser>".
+
+Abhi repo ka koi permanent deploy target configured nahi hai; jab hoga, uska URL yahi likha jayega aur ye checklist usi par chalegi.
+
 Sambandhit: [`docs/22-ACCESSIBILITY-AND-MOBILE-QA.md`](22-ACCESSIBILITY-AND-MOBILE-QA.md) · [`CONTRIBUTING.md`](../CONTRIBUTING.md)
