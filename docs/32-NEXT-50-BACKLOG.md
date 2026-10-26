@@ -42,13 +42,13 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 | C71 | CI workflow asal me lagana | ⛔ `workflows` permission | `.github/workflows/ci.yml` (ready file docs/25 me) pehle PR par green |
 | C72 | CI me strict lint gate | Blocked (C71 ke baad) | `npm run lint` CI me chale |
 | C73 | PR par asset-size automatic summary | Blocked (C71 ke baad) | Report:assets ka natija PR par dikhe |
-| C74 | verify-video ko release ka lazmi step | Ready | Release checklist me command + expected values |
-| C75 | Ek command: `npm run release:check` | Ready | links + lint + build + assets ek saath, fail matlab fail |
+| C74 | verify-video ko release ka lazmi step | ✅ Done | Release checklist me command + expected values |
+| C75 | Ek command: `npm run release:check` | ✅ Done | links + lint + build + assets ek saath, fail matlab fail |
 | C76 | Merge ke baad landing deploy check | Ready | Checklist docs/24 ke saath jud jaye |
 | C77 | `out/` purane renders ki safai-policy | Ready | Kya rakhte hain/kya hatate hain, saboot ke saath (finals kabhi bina record ke nahi) |
-| C78 | CHANGELOG shuru karna | Ready | Har release ek entry: kya, kyon, saboot ka link |
+| C78 | CHANGELOG shuru karna | ✅ Done | Har release ek entry: kya, kyon, saboot ka link |
 | C79 | Version-tagging ka niyam | Ready | v1/v2/final kab kahenge — ek chhota doc |
-| C80 | Final MP4s ki inventory | Ready | Har final: path, size, duration, status — ek table |
+| C80 | Final MP4s ki inventory | ✅ Done | Har final: path, size, duration, status — ek table |
 
 ## Batch 10 — Quality aur gehri accessibility (C81–C90)
 
@@ -59,8 +59,8 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 | C83 | Rang-contrast audit | Ready | Text/background ke ratios, kamzor jodi ki list |
 | C84 | Landing par SRT/VTT captions | Blocked (C63 ke baad) | Har final video ke saath caption track |
 | C85 | Poster ke 9:16 + 4:3 crop variants | Ready | Subject kata na ho; dono crops verify |
-| C86 | ASI05 hero-anchor contact sheet + record | Ready | docs/27 ke anchors ki sheet, aankh se dekhi hui |
-| C87 | P001 verify-report notes me darj | Ready | Codec/fps/frames/duration notes.md me saboot ke saath |
+| C86 | ASI05 hero-anchor contact sheet + record | ✅ Done | docs/27 ke anchors ki sheet, aankh se dekhi hui |
+| C87 | P001 verify-report notes me darj | ✅ Done | Codec/fps/frames/duration notes.md me saboot ke saath |
 | C88 | Quarterly docs review ka pehla run | Ready | docs/30 ki table bhari hui, ek PR me |
 | C89 | “Pending” daavon ki safai | Ready | Jo ho gaya Done; jo nahi, sach likha |
 | C90 | ASI05 phone comprehension test record | ⛔ User review | Bina pause dekha; uljhan wala pal time ke saath likha |
@@ -73,13 +73,15 @@ Pehla backlog (`docs/18-CONTRIBUTION-BACKLOG-50.md`, C01–C50) PR #2 me merge h
 | C92 | README showcase section | Ready | Sabse achha kaam upar dikhe, links ke saath |
 | C93 | docs/29 ko asal GitHub issues me badalna | Ready (issue kholna owner ka kaam) | 10 issues, har ek acceptance ke saath |
 | C94 | ASI04 launch packet ka khana | Blocked (C51 ke baad) | Cover + teaser + walkthrough ki jagah ready |
-| C95 | Production summary cards | Ready | Har production: duration/format/status/links ek jagah |
-| C96 | ASI series index | Ready | Aaya hua + aane wala, status ke saath (bina invent kiye) |
-| C97 | “Kaise dekhein” viewer guide | Ready | Shorts se aane walon ke liye ek page |
+| C95 | Production summary cards | ✅ Done | Har production: duration/format/status/links ek jagah |
+| C96 | ASI series index | ✅ Done | Aaya hua + aane wala, status ke saath (bina invent kiye) |
+| C97 | “Kaise dekhein” viewer guide | ✅ Done | Shorts se aane walon ke liye ek page |
 | C98 | Kisi aur ka pehla PR karwana | ⛔ Dusra contributor | Ek asal PR kisi aur ke naam se merge |
 | C99 | Case studies ko landing se jodna | Ready | Landing se case-study pages ek click par |
 | C100 | C51–C100 mid-review | Aakhir me | Kya hua, kya atka, agle 50 ki seedh |
 
-## Kahan se shuru (is branch par)
+## Progress (is branch par)
 
-Pehle **bina-faisle wale** kaam: C75 (release:check), C86 (contact sheet), C87 (P001 saboot), C78/C80/C95/C96/C97 (docs). Faisle wale (C51 story · voice · workflows permission · C90 phone test) apni jagah park rahenge — unki wajah se baaki kaam nahi rukega.
+**Ho gaya (bina-faisle wala pehla batch):** C74 (release checklist me verify command lazmi), C75 (`npm run release:check` ek command), C78 (CHANGELOG), C80 (final-assets inventory `docs/33`), C86 (ASI05 ke 14 hero anchors ki contact sheet — `npm run extract:asi05`, aankh se verify: RUNNING sirf f1440 par, K01 jagah par, shutter band, Next: ASI04), C87 (P001 ka decode-verify record notes.md me: 1500 frames exact), C95+C96 (`docs/34`), C97 (`docs/35`).
+
+**Park hai (faisle par):** C51–C60 (ASI04 ki story), C61–C70 (voice/sound), C71–C73 (workflows permission), C84 (captions, recordings ke baad), C90 (phone test), C98 (dusra contributor). Inki wajah se baaki kaam nahi rukega — agla bina-faisle wala batch: C57 (frame-cues generator), C81/C83 (audits), C91/C92/C99 (growth docs).

@@ -38,6 +38,8 @@ Walkthroughs sirf padhne ke liye nahi hain — ye contribution ka pehla darwaza 
 - [`CONTRIBUTING.md`](../CONTRIBUTING.md) — kaam shuru karne ke niyam: branch, commit, PR, frame-evidence.
 - [`docs/20-GLOSSARY-cybersecurity.md`](20-GLOSSARY-cybersecurity.md) — ASI series ke shabd aam bhasha me.
 - [`docs/21-ON-SCREEN-COPY-TRANSCRIPTS.md`](21-ON-SCREEN-COPY-TRANSCRIPTS.md) — har video ke exact on-screen shabd ek jagah.
+- [`docs/32-NEXT-50-BACKLOG.md`](32-NEXT-50-BACKLOG.md) — dusra 50-task backlog (C51–C100), fixed goal ke saath.
+- [`docs/35-HOW-TO-WATCH.md`](35-HOW-TO-WATCH.md) — Shorts se aane walon ke liye 3-minute wala raasta.
 
 **Seedha rule:** number badhane ke liye fake chhote commits nahi. Har commit ek saaf, useful, reviewable change hoga — bug fix, test, documentation improvement, accessibility fix, ya naya feature.
 
