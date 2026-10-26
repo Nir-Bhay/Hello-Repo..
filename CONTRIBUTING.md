@@ -4,6 +4,17 @@
 
 > Pehle ye teen files padho: [`docs/17-WALKTHROUGHS-index.md`](docs/17-WALKTHROUGHS-index.md) (kya bana hai) · [`docs/18-CONTRIBUTION-BACKLOG-50.md`](docs/18-CONTRIBUTION-BACKLOG-50.md) (kya kaam baaki hai) · [`AGENTS.md`](AGENTS.md) (agent/operating rules)
 
+## 15 minute me pehla PR (quickstart)
+
+1. **Repo lo aur jaancho (5 min):** `npm ci` → `npm run check:links` → `npx tsc --noEmit` → `npm run preview` (landing khulni chahiye).
+2. **Ek chhota kaam chuno (2 min):** `docs/29-GOOD-FIRST-ISSUES.md` ya GitHub par `good first issue` label wala issue. Bada kaam pehle din mat pakdo.
+3. **Branch banao:** `git checkout -b docs/<chhota-naam>` (main se).
+4. **Ek hi badlav karo (5 min):** ek file, ek maksad. Animation/copy chhua hai to frame saboot rakho (CONTRIBUTING ke niyam neeche).
+5. **Phir jaancho:** `npm run lint` aur `npm run build:preview` — dono saaf.
+6. **PR kholo:** template khud aayega; Summary me task/issue number, Verification me upar wali commands ka natija sach likho.
+
+Bas — pehla PR tayyaar. Review me jo mile, use seekh samjho, sharm nahi.
+
 ## Kaam shuru karne se pehle
 
 1. **Backlog se ek task chuno** (`docs/18-CONTRIBUTION-BACKLOG-50.md`). Ek task = ek logical change. Task ID apne issue/PR me likho (jaise `C11`).
@@ -28,6 +39,8 @@ Agar inme se koi step fresh clone par tute, to wahi ek genuine bug hai — issue
 - **Ek commit = ek samajh aane wala badlav.** Message bataye *kya* aur *kyon*: `docs: add ASI05 glossary (C15)` achha hai; `update`, `fix`, `changes` bekaar hai.
 - Bade kaam ko **logical commits** me todo — lekin har commit apne aap me complete aur reviewable ho. Aadha toota hua beech-wala commit nahi.
 - Khaali/naam-ke commits (sirf date, sirf space, sirf number) **kabhi nahi**. Contribution graph se zyada zaruri hai ki history padhne par kahani samajh aaye.
+
+- **Har PR me CHANGELOG ki ek entry** (T110): kya badla, ek line, `Unreleased` ke neeche. History hi portfolio hai — bina entry wala PR adha maana jayega.
 
 ## Pull request rules
 

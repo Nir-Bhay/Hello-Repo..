@@ -14,13 +14,18 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 // frame: kya verify karna hai
 export const ASI05_REVIEW_ANCHORS = [
   [84, "task handoff complete"],
+  [342, "report settled · EXTERNAL REPORT/Test failed padhne layak"],
+  [750, "I01 (chhupa hukm) ka dedicated read khatm"],
   [522, "report flap poora khula · OUTSIDE INPUT"],
   [936, "selection brackets hukm ko ghere hue"],
   [1038, "copied strip editor tak pahunchi"],
   [1092, "script poora authored · NEW SCRIPT yahin se"],
   [1440, "RUN press · RUNNING sirf yahin se"],
+  [1692, "Read project secret padhne layak (pehla operation)"],
   [1962, "K02 copy ka janm · K01 apni jagah"],
   [2130, "K02 bahar receive"],
+  [2610, "Replay + Same code. Restricted workspace. settled"],
+  [2868, "No secrets inside. stable"],
   [3030, "network shutter poora band"],
   [3270, "Replay RUNNING (protected press ke baad)"],
   [3510, "read denied ka contact"],

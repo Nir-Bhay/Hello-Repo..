@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "check:links": "node scripts/check-links.mjs",
     "report:assets": "node scripts/report-assets.mjs",
+    "report:bundle": "node scripts/report-bundle.mjs",
     "lint": "npm run check:links && npx tsc --noEmit --noUnusedLocals --noUnusedParameters",
     "verify:video": "node scripts/verify-video.mjs",
     "extract:frames": "node scripts/extract-frames.mjs",

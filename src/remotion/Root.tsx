@@ -19,7 +19,7 @@ import { ASI05_FPS, ASI05_TOTAL_FRAMES } from "./compositions/asi05v3/shots";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* P001 — pehla asal production (docs: productions/001-chatgpt-google-connect/) */}
+      {/* P001 — pehla asal production (documents: productions/001-chatgpt-google-connect/) */}
       <Composition
         id="P001ChatGptConnect"
         component={P001ChatGptConnect}
@@ -64,7 +64,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
-      {/* YouTube / landscape — cinematic 60fps */}
+      {/* Showcase — YouTube/landscape ke liye, cinematic 60fps */}
       <Composition
         id="ShowcaseKinetic"
         component={ShowcaseKinetic}
@@ -73,7 +73,7 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
       />
-      {/* Shorts / Reels / TikTok — 9:16 hook machine */}
+      {/* ShortHook — Shorts/Reels/TikTok ke liye, 9:16 hook machine */}
       <Composition
         id="ShortHook"
         component={ShortHook}
@@ -82,7 +82,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
-      {/* Feed post 1:1 — data story */}
+      {/* DataStory — feed post (1:1) ke liye data film */}
       <Composition
         id="DataStory"
         component={DataStory}

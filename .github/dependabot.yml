@@ -1,0 +1,12 @@
+# Dependabot (T144) — dependencies purani = suraksha jokhim. Haftawar, chhote PR.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+    labels:
+      - "dependencies"
+    open-pull-requests-limit: 5
