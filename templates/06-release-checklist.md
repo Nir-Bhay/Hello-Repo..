@@ -13,6 +13,7 @@ Har final render isi raaste se jayega. Ek bhi box khaali ho to “final” word 
 
 ## 3. Technical verification (saboot ke saath)
 - [ ] Metadata match: width/height/fps/duration/frame-count expected ke barabar (ASI05 premium ki tarah: 1080×1920, 60fps, exactly 4500 frames, 75.00s).
+  Command: `node scripts/verify-video.mjs <file> <W> <H> <FPS> <FRAMES>` — saare ✓ aane chahiye (C74: ye step lazmi hai, andaz nahi chalega).
 - [ ] Codec playback-safe hai (H.264 yuv420p; yuvj420p ho to transcode).
 - [ ] Sound wala video ho to loudness target ke aas-paas (−14 LUFS) aur silent pass ho to wo jaan-boojh ka faisla document me likha hai.
 

@@ -27,3 +27,18 @@ Is sandbox me Chromium download blocked tha; NSS/NSPR libraries `@sparticuz/chro
 ## User ke liye bache hue faisle (v2 me ho sakta hai)
 - Voiceover chahiye to API key lagegi — script ready hai, sirf awaz add hogi aur timing voice se lock hoga.
 - Hook ke 2 aur options 02-script.md me hain — chaahe to unpe A/B version ban sakta hai.
+
+## Technical verification record (C87 · 2026-10-26)
+
+Command: `node scripts/verify-video.mjs public/videos/001-chatgpt-google-9x16-v1.mp4 1080 1920 30 1500`
+(ffmpeg decode-count route — frames gin kar verify kiye gaye, sirf metadata par bharosa nahi.)
+
+| Check | Expected | Mila |
+|---|---|---|
+| Codec | h264 | h264 ✓ |
+| Size | 1080×1920 | 1080×1920 ✓ |
+| Frame rate | 30 fps | 30 fps ✓ |
+| Frames | 1500 (50s × 30) | **1500** ✓ |
+| Duration | 50.00s | 50.01s (container rounding; frames exact hain) ✓ |
+
+Natija: P001 final file apne lock (50s · 9:16 · 30fps) par khari hai. Ye record `docs/33-FINAL-ASSETS-INVENTORY.md` ki "final" wali row ka saboot hai.
