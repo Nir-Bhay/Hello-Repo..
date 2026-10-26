@@ -71,4 +71,4 @@ Pehle fayda dikhta hai: *ChatGPT ab tumhara Gmail bhi padhega!* Phir ek sach: pu
 
 - ✅ Final render landing page par chalta hai (upar wala pehla video section).
 - 🔊 Is video me sound hai (music + SFX) — ASI05 ke silent pass se alag.
-- ⏳ Narrated walkthrough iske liye backlog me hai (C44) — hoga to script pehle yahi save hogi.
+- 🎙 Narration **script ready hai** (`06-walkthrough-script.md`, C44) — recording voice ke faisle ke baad hogi.
