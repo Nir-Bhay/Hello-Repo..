@@ -35,3 +35,14 @@ Rang “acha lagta hai” se nahi, **hisaab** se pass hota hai. Neeche ASI05 pal
 Relative luminance (WCAG): har channel ko linear karke `L = 0.2126R + 0.7152G + 0.0722B`, phir ratio `(L1 + 0.05) / (L2 + 0.05)`. Naye rang jodne se pehle uske saare text-jode yahan gino — “lagbhag chalega” is file me pass nahi hai.
 
 Aur padho: [`docs/22-ACCESSIBILITY-AND-MOBILE-QA.md`](22-ACCESSIBILITY-AND-MOBILE-QA.md) · [`docs/28-NEXT-EPISODES-ART-DIRECTION.md`](28-NEXT-EPISODES-ART-DIRECTION.md)
+
+## Addendum — 26 Oct 2026 (T150)
+
+Code se hisaab karke (WCAG luminance formula) naye elements ki jaanch:
+
+| Element | Rang | Ratio | Faisla |
+|---|---|---|---|
+| Skip-link (landing se) | Safed text `#FFFFFF` on button-red `#C93E1F` | **5.01 : 1** | AA normal-text pass (4.5 chahiye tha) |
+| Player-load button | Paper `#F4F1E9` on panel `#12121A`, dashed blue kinara | 15+ : 1 (text) | Pass; kinara sajawati hai, bharosa text par hai |
+
+**Nishkarsh:** skip-link ko gehara karne ki zaroorat nahi padi — 5.01 AA se upar hai. Jo purani findings (muted 4.36 sirf bade text ke liye, "Next: ASI04" ochre 2.63) wo ASI04 ke design ke samay phir khulengi; ASI05 ki lock file ko haath nahi lagaaya.

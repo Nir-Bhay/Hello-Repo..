@@ -60,3 +60,17 @@ Headless Chromium (sparticuz build, asli browser engine) se landing ko sach me c
 - ⏳ Asli haath ke phone par normal-speed comprehension test ab bhi **user** ko karna hai (C90) — headless browser uski jagah nahi le sakta, aur ye daava yahan saaf likha hai.
 
 Aur padho: [`docs/17-WALKTHROUGHS-index.md`](17-WALKTHROUGHS-index.md) · [`CONTRIBUTING.md`](../CONTRIBUTING.md)
+
+---
+
+## Execution record — re-run (26 Oct 2026, T151 / issue #13)
+
+Skip-link, naye posters/captions aur code-splitting ke baad wahi checklist asal headless Chromium me **dobara chalaayi gayi** (vite preview, dist build ke upar):
+
+- **Pehli Tab stop ab sach me skip-link hai** — aur ye sudhaar isi re-run ki pakad hai: pehle run me Remotion Player mount hote hi focus apne andar kheench raha tha, isiliye Tab skip-link ko chook jaata tha. Ab player Lab ke paas aane par hi mount hota hai (IntersectionObserver gate), aur keyboard user ke liye "Live player load karo" button sahi jagah par khada milta hai.
+- Skip-link Enter karne par URL `#walkthroughs` hota hai aur page wahi rukta hai.
+- 4/4 videos par poster mojood; ASI05 aur P001 par `captions` track (on-screen text) laga hai.
+- Lazy player: scroll par DemoStage chunk load hokar player render hota hai (SVG frame dikha) — code-split ke baad bhi player zinda hai.
+- Mobile 390px: `scrollWidth == innerWidth` — horizontal scroll nahi.
+
+Jo is re-run me **nahi** hua, wo saaf likha rahe: asli haath ke phone par normal-speed samajh (C90) ab bhi baki hai — wo kisi browser-emulation se "done" nahi maani jayegi.

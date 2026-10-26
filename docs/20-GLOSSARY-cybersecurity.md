@@ -23,6 +23,9 @@ ASI05 jaise episodes me kuch shabd baar-baar aate hain. Ye page unhe **bina jarg
 | **Blocked** | Jab bahar jaane ki koshish band darwaze se takraye. Koshish hui, raasta mila nahi. | S13 — “CONNECTION BLOCKED” (contact f3792). |
 | **Packet (P01)** | Bahar bheji jaane wali ek chhoti si “thaeli”. ASI05 ke Replay me ye **khaali** hai — isiliye andar key ka nishan kabhi nahi dikhta. | S13 — khaali P01 band shutter par rukta hai. |
 | **Bahar jaana (exfiltration ka diagram)** | Data ka workspace se bahar nikal jana. Video me ye sirf ek copy ka safar bankar dikhta hai — koi asal tareeka kabhi nahi dikhaya jata. | S07 — “A secret leaves the workspace.” (receipt f2130 ke baad hi caption). |
+| **K01** | Asli secret — project ki asal chaabi. Kahani ki sabse samajhne-wali baat: K01 **apni jagah se hila hi nahi**. “Read” hone ka matlab hai: kisi ne use padh/dekh liya — chaabi wahi rahi, par ab koi aur uske baारे me jaanta hai. | S06-S07 — K01 chip apne slot me rehta hai. |
+| **K02** | K01 ki **tokenized copy** — asal chaabi nahi, uska ek chhota sa badla hua roop (jaise chaabi ka number likh kar bhej dena; chaabi nahi gayi, uska pata chal gaya). Bahar gaya to **yahi** gaya, K01 nahi. | f1962 par K02 banta hai; wahi bahar receive (f2130) hota hai. |
+| **Token** | Aam bhasha me: asal cheez ki jagah chalne wala ek pratinidhi (representative) tukda. Jaise bank ki asal tijori ki chaabi nahi, ek OTP — asal nahi, par asal tak pahunchne ka raasta khol sakta hai. Isiliye token ka bahar jana bhi ghata (loss) hai, “kuchh nahi gaya” kehna galat hoga. | K02 isi soch ka diagram hai. |
 | **Category (ASI05)** | Ghatna ko uska sahi naam dena, taaki seekh yaad rahe: *Unexpected Code Execution* — code chala, bina tumhare sach me kahe. | S08 — leak ke baad, Replay se pehle. |
 
 ## Teen jumle me puri seekh
